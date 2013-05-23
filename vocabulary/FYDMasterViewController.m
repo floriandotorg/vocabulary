@@ -8,49 +8,62 @@
 
 #import "FYDMasterViewController.h"
 
-#import "FYDDetailViewController.h"
+#import "FYDTestViewController.h"
 
-@interface FYDMasterViewController () {
-    NSMutableArray *_objects;
-}
+#import "FYDStageCell.h"
+#import "FYDStage.h"
+#import "FYDVocable.h"
+#import "FYDVocabularyBox.h"
+#import "FYDVocabularyTest.h"
+
+@interface FYDMasterViewController ()
+
+@property (strong,nonatomic) FYDVocabularyBox *vocabularyBox;
+
 @end
 
 @implementation FYDMasterViewController
 
 - (void)awakeFromNib
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        self.clearsSelectionOnViewWillAppear = NO;
-        self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
-    }
     [super awakeFromNib];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
-    self.detailViewController = (FYDDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    self.vocabularyBox = [[FYDVocabularyBox alloc] init];
+    
+    {
+        FYDStage *stage = [self.vocabularyBox addStage];
+        [stage createVocableWithNative:@"Haus" AndForeign:@"House"];
+        [stage createVocableWithNative:@"Teppich" AndForeign:@"Carpet"];
+        [stage createVocableWithNative:@"Auto" AndForeign:@"Car"];
+    }
+    
+    {
+        FYDStage *stage = [self.vocabularyBox addStage];
+        [stage createVocableWithNative:@"Urlaub" AndForeign:@"Holiday"];
+        [stage createVocableWithNative:@"Wohnwagen" AndForeign:@"Camper"];
+        [stage createVocableWithNative:@"Handy" AndForeign:@"Cellphone"];
+        [stage createVocableWithNative:@"Käfig" AndForeign:@"Cage"];
+    }
+    
+    {
+        FYDStage *stage = [self.vocabularyBox addStage];
+        [stage createVocableWithNative:@"füttern" AndForeign:@"to feed"];
+    }
+    
+    {
+        [self.vocabularyBox addStage];
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)insertNewObject:(id)sender
-{
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
-    [_objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 #pragma mark - Table View
@@ -62,64 +75,37 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return self.vocabularyBox.stageCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    FYDStageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    [cell setStage:[self.vocabularyBox stageAt:indexPath.row]];
+    
     return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)testViewControllerDidFinish
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-}
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        NSDate *object = _objects[indexPath.row];
-        self.detailViewController.detailItem = object;
-    }
+    [self.tableView reloadData];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+    if ([[segue identifier] isEqualToString:@"startTest"])
+    {
+        FYDTestViewController *viewController = [[segue.destinationViewController viewControllers] objectAtIndex:0];
+        
+        viewController.vocableTest = [self.vocabularyBox vocabularyTestForStage:[self.tableView indexPathForSelectedRow].row];
+        
+        viewController.delegate = self;
     }
 }
 

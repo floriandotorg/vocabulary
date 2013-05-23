@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class FYDDetailViewController;
+#import "FYDTestViewController.h"
 
-@interface FYDMasterViewController : UITableViewController
+@interface FYDMasterViewController : UITableViewController<FYDTestViewControllerDelegate>
 
-@property (strong, nonatomic) FYDDetailViewController *detailViewController;
+@property (strong, nonatomic) FYDTestViewController *detailViewController;
 
 @end

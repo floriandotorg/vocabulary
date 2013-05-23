@@ -17,14 +17,18 @@
 		1777016A174E51CB006F1DE8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17770169174E51CB006F1DE8 /* Default@2x.png */; };
 		1777016C174E51CB006F1DE8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1777016B174E51CB006F1DE8 /* Default-568h@2x.png */; };
 		1777016F174E51CB006F1DE8 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1777016D174E51CB006F1DE8 /* MainStoryboard_iPhone.storyboard */; };
-		17770172174E51CB006F1DE8 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17770170174E51CB006F1DE8 /* MainStoryboard_iPad.storyboard */; };
 		17770175174E51CB006F1DE8 /* FYDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17770174174E51CB006F1DE8 /* FYDMasterViewController.m */; };
-		17770178174E51CB006F1DE8 /* FYDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17770177174E51CB006F1DE8 /* FYDDetailViewController.m */; };
+		17770178174E51CB006F1DE8 /* FYDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17770177174E51CB006F1DE8 /* FYDTestViewController.m */; };
 		17770180174E51CC006F1DE8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1777017F174E51CC006F1DE8 /* SenTestingKit.framework */; };
 		17770181174E51CC006F1DE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17770155174E51CB006F1DE8 /* UIKit.framework */; };
 		17770182174E51CC006F1DE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17770157174E51CB006F1DE8 /* Foundation.framework */; };
 		1777018A174E51CC006F1DE8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17770188174E51CC006F1DE8 /* InfoPlist.strings */; };
 		1777018D174E51CC006F1DE8 /* vocabularyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1777018C174E51CC006F1DE8 /* vocabularyTests.m */; };
+		17770198174E5907006F1DE8 /* FYDStageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17770197174E5907006F1DE8 /* FYDStageCell.m */; };
+		1777019B174E5AA0006F1DE8 /* FYDStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1777019A174E5AA0006F1DE8 /* FYDStage.m */; };
+		1777019E174E628A006F1DE8 /* FYDVocable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1777019D174E628A006F1DE8 /* FYDVocable.m */; };
+		177701A1174E761A006F1DE8 /* FYDVocabularyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 177701A0174E761A006F1DE8 /* FYDVocabularyTest.m */; };
+		177701A6174E931F006F1DE8 /* FYDVocabularyBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 177701A5174E931F006F1DE8 /* FYDVocabularyBox.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,17 +56,26 @@
 		17770169174E51CB006F1DE8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1777016B174E51CB006F1DE8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1777016E174E51CB006F1DE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		17770171174E51CB006F1DE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		17770173174E51CB006F1DE8 /* FYDMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYDMasterViewController.h; sourceTree = "<group>"; };
 		17770174174E51CB006F1DE8 /* FYDMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDMasterViewController.m; sourceTree = "<group>"; };
-		17770176174E51CB006F1DE8 /* FYDDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYDDetailViewController.h; sourceTree = "<group>"; };
-		17770177174E51CB006F1DE8 /* FYDDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDDetailViewController.m; sourceTree = "<group>"; };
+		17770176174E51CB006F1DE8 /* FYDTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYDTestViewController.h; sourceTree = "<group>"; };
+		17770177174E51CB006F1DE8 /* FYDTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDTestViewController.m; sourceTree = "<group>"; };
 		1777017E174E51CC006F1DE8 /* vocabularyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vocabularyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1777017F174E51CC006F1DE8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		17770187174E51CC006F1DE8 /* vocabularyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "vocabularyTests-Info.plist"; sourceTree = "<group>"; };
 		17770189174E51CC006F1DE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1777018B174E51CC006F1DE8 /* vocabularyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vocabularyTests.h; sourceTree = "<group>"; };
 		1777018C174E51CC006F1DE8 /* vocabularyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vocabularyTests.m; sourceTree = "<group>"; };
+		17770196174E5907006F1DE8 /* FYDStageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDStageCell.h; sourceTree = "<group>"; };
+		17770197174E5907006F1DE8 /* FYDStageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDStageCell.m; sourceTree = "<group>"; };
+		17770199174E5AA0006F1DE8 /* FYDStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDStage.h; sourceTree = "<group>"; };
+		1777019A174E5AA0006F1DE8 /* FYDStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDStage.m; sourceTree = "<group>"; };
+		1777019C174E628A006F1DE8 /* FYDVocable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDVocable.h; sourceTree = "<group>"; };
+		1777019D174E628A006F1DE8 /* FYDVocable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDVocable.m; sourceTree = "<group>"; };
+		1777019F174E761A006F1DE8 /* FYDVocabularyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDVocabularyTest.h; sourceTree = "<group>"; };
+		177701A0174E761A006F1DE8 /* FYDVocabularyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDVocabularyTest.m; sourceTree = "<group>"; };
+		177701A4174E931F006F1DE8 /* FYDVocabularyBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDVocabularyBox.h; sourceTree = "<group>"; };
+		177701A5174E931F006F1DE8 /* FYDVocabularyBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDVocabularyBox.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,11 +138,9 @@
 				17770164174E51CB006F1DE8 /* FYDAppDelegate.h */,
 				17770165174E51CB006F1DE8 /* FYDAppDelegate.m */,
 				1777016D174E51CB006F1DE8 /* MainStoryboard_iPhone.storyboard */,
-				17770170174E51CB006F1DE8 /* MainStoryboard_iPad.storyboard */,
-				17770173174E51CB006F1DE8 /* FYDMasterViewController.h */,
-				17770174174E51CB006F1DE8 /* FYDMasterViewController.m */,
-				17770176174E51CB006F1DE8 /* FYDDetailViewController.h */,
-				17770177174E51CB006F1DE8 /* FYDDetailViewController.m */,
+				177701A3174E802D006F1DE8 /* Controller */,
+				177701A2174E8019006F1DE8 /* Model */,
+				177701A7174E995E006F1DE8 /* View */,
 				1777015C174E51CB006F1DE8 /* Supporting Files */,
 			);
 			path = vocabulary;
@@ -166,6 +177,41 @@
 				17770188174E51CC006F1DE8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		177701A2174E8019006F1DE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17770199174E5AA0006F1DE8 /* FYDStage.h */,
+				1777019A174E5AA0006F1DE8 /* FYDStage.m */,
+				1777019C174E628A006F1DE8 /* FYDVocable.h */,
+				1777019D174E628A006F1DE8 /* FYDVocable.m */,
+				1777019F174E761A006F1DE8 /* FYDVocabularyTest.h */,
+				177701A0174E761A006F1DE8 /* FYDVocabularyTest.m */,
+				177701A4174E931F006F1DE8 /* FYDVocabularyBox.h */,
+				177701A5174E931F006F1DE8 /* FYDVocabularyBox.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		177701A3174E802D006F1DE8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				17770173174E51CB006F1DE8 /* FYDMasterViewController.h */,
+				17770174174E51CB006F1DE8 /* FYDMasterViewController.m */,
+				17770176174E51CB006F1DE8 /* FYDTestViewController.h */,
+				17770177174E51CB006F1DE8 /* FYDTestViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		177701A7174E995E006F1DE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17770196174E5907006F1DE8 /* FYDStageCell.h */,
+				17770197174E5907006F1DE8 /* FYDStageCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +291,6 @@
 				1777016A174E51CB006F1DE8 /* Default@2x.png in Resources */,
 				1777016C174E51CB006F1DE8 /* Default-568h@2x.png in Resources */,
 				1777016F174E51CB006F1DE8 /* MainStoryboard_iPhone.storyboard in Resources */,
-				17770172174E51CB006F1DE8 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +328,12 @@
 				17770162174E51CB006F1DE8 /* main.m in Sources */,
 				17770166174E51CB006F1DE8 /* FYDAppDelegate.m in Sources */,
 				17770175174E51CB006F1DE8 /* FYDMasterViewController.m in Sources */,
-				17770178174E51CB006F1DE8 /* FYDDetailViewController.m in Sources */,
+				17770178174E51CB006F1DE8 /* FYDTestViewController.m in Sources */,
+				17770198174E5907006F1DE8 /* FYDStageCell.m in Sources */,
+				1777019B174E5AA0006F1DE8 /* FYDStage.m in Sources */,
+				1777019E174E628A006F1DE8 /* FYDVocable.m in Sources */,
+				177701A1174E761A006F1DE8 /* FYDVocabularyTest.m in Sources */,
+				177701A6174E931F006F1DE8 /* FYDVocabularyBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,14 +370,6 @@
 				1777016E174E51CB006F1DE8 /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		17770170174E51CB006F1DE8 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				17770171174E51CB006F1DE8 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		17770188174E51CC006F1DE8 /* InfoPlist.strings */ = {
@@ -405,7 +447,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vocabulary/vocabulary-Prefix.pch";
 				INFOPLIST_FILE = "vocabulary/vocabulary-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -416,7 +460,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vocabulary/vocabulary-Prefix.pch";
 				INFOPLIST_FILE = "vocabulary/vocabulary-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -474,6 +520,7 @@
 				17770192174E51CC006F1DE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17770193174E51CC006F1DE8 /* Build configuration list for PBXNativeTarget "vocabularyTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +529,7 @@
 				17770195174E51CC006F1DE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
