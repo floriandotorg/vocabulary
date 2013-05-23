@@ -79,4 +79,25 @@
     }
 }
 
+#pragma mark - Persistent State
+
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{    
+    [aCoder encodeInteger:self.lastStageNo forKey:@"lastStageNo"];
+    [aCoder encodeObject:self.stages forKey:@"stages"];
+    [aCoder encodeObject:self.learned forKey:@"learned"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super init])
+    {
+        self.lastStageNo = [aDecoder decodeIntegerForKey:@"lastStageNo"];
+        self.stages = [aDecoder decodeObjectForKey:@"stages"];
+        self.learned = [aDecoder decodeObjectForKey:@"learned"];
+    }
+    
+    return self;
+}
+
 @end

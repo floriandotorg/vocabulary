@@ -33,30 +33,35 @@
 {
     [super viewDidLoad];
     
-    self.vocabularyBox = [[FYDVocabularyBox alloc] init];
+    [self loadVocabularyBox];
     
+    if (self.vocabularyBox == nil)
     {
-        FYDStage *stage = [self.vocabularyBox addStage];
-        [stage createVocableWithNative:@"Haus" AndForeign:@"House"];
-        [stage createVocableWithNative:@"Teppich" AndForeign:@"Carpet"];
-        [stage createVocableWithNative:@"Auto" AndForeign:@"Car"];
-    }
-    
-    {
-        FYDStage *stage = [self.vocabularyBox addStage];
-        [stage createVocableWithNative:@"Urlaub" AndForeign:@"Holiday"];
-        [stage createVocableWithNative:@"Wohnwagen" AndForeign:@"Camper"];
-        [stage createVocableWithNative:@"Handy" AndForeign:@"Cellphone"];
-        [stage createVocableWithNative:@"Käfig" AndForeign:@"Cage"];
-    }
-    
-    {
-        FYDStage *stage = [self.vocabularyBox addStage];
-        [stage createVocableWithNative:@"füttern" AndForeign:@"to feed"];
-    }
-    
-    {
-        [self.vocabularyBox addStage];
+        self.vocabularyBox = [[FYDVocabularyBox alloc] init];
+        
+        {
+            FYDStage *stage = [self.vocabularyBox addStage];
+            [stage createVocableWithNative:@"Haus" AndForeign:@"House"];
+            [stage createVocableWithNative:@"Teppich" AndForeign:@"Carpet"];
+            [stage createVocableWithNative:@"Auto" AndForeign:@"Car"];
+        }
+        
+        {
+            FYDStage *stage = [self.vocabularyBox addStage];
+            [stage createVocableWithNative:@"Urlaub" AndForeign:@"Holiday"];
+            [stage createVocableWithNative:@"Wohnwagen" AndForeign:@"Camper"];
+            [stage createVocableWithNative:@"Handy" AndForeign:@"Cellphone"];
+            [stage createVocableWithNative:@"Käfig" AndForeign:@"Cage"];
+        }
+        
+        {
+            FYDStage *stage = [self.vocabularyBox addStage];
+            [stage createVocableWithNative:@"füttern" AndForeign:@"to feed"];
+        }
+        
+        {
+            [self.vocabularyBox addStage];
+        }
     }
 }
 
@@ -92,8 +97,11 @@
     return NO;
 }
 
+#pragma mark - Vocabulary Test
+
 - (void)testViewControllerDidFinish
 {
+    [self saveVocabularyBox];
     [self.tableView reloadData];
 }
 
@@ -107,6 +115,66 @@
         
         viewController.delegate = self;
     }
+}
+
+#pragma mark - Persistent State
+
+- (NSURL*)applicationDataDirectory
+{
+    NSFileManager* sharedFM = [NSFileManager defaultManager];
+    NSArray* possibleURLs = [sharedFM URLsForDirectory:NSApplicationSupportDirectory
+                                             inDomains:NSUserDomainMask];
+    NSURL* appSupportDir = nil;
+    NSURL* appDirectory = nil;
+    
+    if ([possibleURLs count] >= 1) {
+        // Use the first directory (if multiple are returned)
+        appSupportDir = [possibleURLs objectAtIndex:0];
+    }
+    
+    // If a valid app support directory exists, add the
+    // app's bundle ID to it to specify the final directory.
+    if (appSupportDir) {
+        NSString* appBundleID = [[NSBundle mainBundle] bundleIdentifier];
+        appDirectory = [appSupportDir URLByAppendingPathComponent:appBundleID];
+    }
+    
+    return appDirectory;
+}
+
+- (NSString*) pathToVocabularyBox
+{
+    NSURL *applicationSupportURL = [self applicationDataDirectory];
+    
+    if (! [[NSFileManager defaultManager] fileExistsAtPath:[applicationSupportURL path]])
+    {
+        NSError *error = nil;
+        
+        [[NSFileManager defaultManager] createDirectoryAtPath:[applicationSupportURL path]
+                                  withIntermediateDirectories:YES
+                                                   attributes:nil
+                                                        error:&error];
+        
+        if (error)
+        {
+            NSLog(@"error creating app support dir: %@", error);
+        }
+        
+    }
+    
+    NSString *path = [[applicationSupportURL path] stringByAppendingPathComponent:@"VocabularyBox.plist"];
+    
+    return path;
+}
+
+- (void) loadVocabularyBox
+{
+    self.vocabularyBox = [NSKeyedUnarchiver unarchiveObjectWithFile:[self pathToVocabularyBox]];
+}
+
+- (void) saveVocabularyBox
+{
+    [NSKeyedArchiver archiveRootObject:self.vocabularyBox toFile:[self pathToVocabularyBox]];
 }
 
 @end

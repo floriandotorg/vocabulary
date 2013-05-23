@@ -57,4 +57,28 @@
     return [[FYDVocabularyTest alloc] initWithVocabularies:self.vocabularies AndVocabularyBox:box];
 }
 
+#pragma mark - Persistent State
+
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeInteger:self.no forKey:@"no"];
+    [aCoder encodeObject:self.vocabularies forKey:@"vocabularies"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super init])
+    {
+        self.no = [aDecoder decodeIntegerForKey:@"no"];
+        self.vocabularies = [aDecoder decodeObjectForKey:@"vocabularies"];
+        
+        for (FYDVocable *vocable in self.vocabularies)
+        {
+            vocable.stage = self;
+        }
+    }
+    
+    return self;
+}
+
 @end
