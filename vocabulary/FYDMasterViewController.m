@@ -8,6 +8,10 @@
 
 #import "FYDMasterViewController.h"
 
+#import <Dropbox/Dropbox.h>
+
+#import "DejalActivityView.h"
+
 #import "FYDTestViewController.h"
 
 #import "FYDStageCell.h"
@@ -33,42 +37,85 @@
 {
     [super viewDidLoad];
     
-    [self loadVocabularyBox];
+    [self updateDropbox];
     
-    if (self.vocabularyBox == nil)
-    {
-        self.vocabularyBox = [[FYDVocabularyBox alloc] init];
-        
-        {
-            FYDStage *stage = [self.vocabularyBox addStage];
-            [stage createVocableWithNative:@"Haus" AndForeign:@"House"];
-            [stage createVocableWithNative:@"Teppich" AndForeign:@"Carpet"];
-            [stage createVocableWithNative:@"Auto" AndForeign:@"Car"];
-        }
-        
-        {
-            FYDStage *stage = [self.vocabularyBox addStage];
-            [stage createVocableWithNative:@"Urlaub" AndForeign:@"Holiday"];
-            [stage createVocableWithNative:@"Wohnwagen" AndForeign:@"Camper"];
-            [stage createVocableWithNative:@"Handy" AndForeign:@"Cellphone"];
-            [stage createVocableWithNative:@"Käfig" AndForeign:@"Cage"];
-        }
-        
-        {
-            FYDStage *stage = [self.vocabularyBox addStage];
-            [stage createVocableWithNative:@"füttern" AndForeign:@"to feed"];
-        }
-        
-        {
-            [self.vocabularyBox addStage];
-        }
-    }
+    [[DBFilesystem sharedFilesystem] addObserver:self forPath:self.vocabularyBoxPath block:^
+     {
+         [self loadVocabularyBox];
+     }];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(applicationDidBecomeActive:)
+                                                name:UIApplicationDidBecomeActiveNotification
+                                              object:nil];
+}
+
+- (void)viewDidUnload
+{
+    [[DBFilesystem sharedFilesystem] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [super viewDidUnload];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Delegate
+
+- (void)applicationDidBecomeActive:(NSNotification*)notification
+{
+    [self loadVocabularyBox];
+}
+
+- (IBAction)plusClick:(UIBarButtonItem *)sender
+{
+    self.vocabularyBox = [[FYDVocabularyBox alloc] init];
+    
+    {
+        FYDStage *stage = [self.vocabularyBox addStage];
+        [stage createVocableWithNative:@"Haus" AndForeign:@"House"];
+        [stage createVocableWithNative:@"Teppich" AndForeign:@"Carpet"];
+        [stage createVocableWithNative:@"Auto" AndForeign:@"Car"];
+    }
+    
+    {
+        FYDStage *stage = [self.vocabularyBox addStage];
+        [stage createVocableWithNative:@"Urlaub" AndForeign:@"Holiday"];
+        [stage createVocableWithNative:@"Wohnwagen" AndForeign:@"Camper"];
+        [stage createVocableWithNative:@"Handy" AndForeign:@"Cellphone"];
+        [stage createVocableWithNative:@"Käfig" AndForeign:@"Cage"];
+    }
+    
+    {
+        FYDStage *stage = [self.vocabularyBox addStage];
+        [stage createVocableWithNative:@"füttern" AndForeign:@"to feed"];
+    }
+    
+    {
+        [self.vocabularyBox addStage];
+    }
+    
+    [self saveVocabularyBox];
+    [self.tableView reloadData];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    [self performSegueWithIdentifier:@"modalToSettings" sender:self];
+}
+
+- (void)settingsViewControllerDidFinish
+{
+    [self loadVocabularyBox];
+}
+
+- (void)testViewControllerDidFinish
+{
+    [self saveVocabularyBox];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table View
@@ -97,13 +144,7 @@
     return NO;
 }
 
-#pragma mark - Vocabulary Test
-
-- (void)testViewControllerDidFinish
-{
-    [self saveVocabularyBox];
-    [self.tableView reloadData];
-}
+#pragma mark - Prepare For Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -115,66 +156,91 @@
         
         viewController.delegate = self;
     }
+    else if ([[segue identifier] isEqualToString:@"modalToSettings"])
+    {
+        FYDSettingsViewController *viewController = [[segue.destinationViewController viewControllers] objectAtIndex:0];
+        viewController.delegate = self;
+    }
 }
 
 #pragma mark - Persistent State
 
-- (NSURL*)applicationDataDirectory
+- (void)updateDropbox
 {
-    NSFileManager* sharedFM = [NSFileManager defaultManager];
-    NSArray* possibleURLs = [sharedFM URLsForDirectory:NSApplicationSupportDirectory
-                                             inDomains:NSUserDomainMask];
-    NSURL* appSupportDir = nil;
-    NSURL* appDirectory = nil;
+    DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
     
-    if ([possibleURLs count] >= 1) {
-        // Use the first directory (if multiple are returned)
-        appSupportDir = [possibleURLs objectAtIndex:0];
+    if (account == nil)
+    {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Dropbox"
+                                                        message:@"You need to link your Dropbox account to use this app."
+                                                       delegate:self
+                                              cancelButtonTitle:nil
+                                              otherButtonTitles:@"Goto Settings",nil];
+        [alert show];
     }
-    
-    // If a valid app support directory exists, add the
-    // app's bundle ID to it to specify the final directory.
-    if (appSupportDir) {
-        NSString* appBundleID = [[NSBundle mainBundle] bundleIdentifier];
-        appDirectory = [appSupportDir URLByAppendingPathComponent:appBundleID];
+    else
+    {
+        if ([DBFilesystem sharedFilesystem] == nil)
+        {
+            DBFilesystem *filesystem = [[DBFilesystem alloc] initWithAccount:account];
+            [DBFilesystem setSharedFilesystem:filesystem];
+        }
     }
-    
-    return appDirectory;
 }
 
-- (NSString*) pathToVocabularyBox
+- (DBPath*)vocabularyBoxPath
 {
-    NSURL *applicationSupportURL = [self applicationDataDirectory];
-    
-    if (! [[NSFileManager defaultManager] fileExistsAtPath:[applicationSupportURL path]])
-    {
-        NSError *error = nil;
-        
-        [[NSFileManager defaultManager] createDirectoryAtPath:[applicationSupportURL path]
-                                  withIntermediateDirectories:YES
-                                                   attributes:nil
-                                                        error:&error];
-        
-        if (error)
-        {
-            NSLog(@"error creating app support dir: %@", error);
-        }
-        
-    }
-    
-    NSString *path = [[applicationSupportURL path] stringByAppendingPathComponent:@"VocabularyBox.plist"];
-    
-    return path;
+    return [[DBPath root] childPath:@"VocabularyBox.plist"];
 }
 
 - (void) loadVocabularyBox
 {
-    self.vocabularyBox = [NSKeyedUnarchiver unarchiveObjectWithFile:[self pathToVocabularyBox]];
+    [DejalBezelActivityView activityViewForView:self.view withLabel:@"Loading.."];
+    [DejalBezelActivityView currentActivityView].showNetworkActivityIndicator = YES;
+    
+    dispatch_async(dispatch_get_main_queue(), ^
+    {
+        [self updateDropbox];
+        
+        DBFile *file = [[DBFilesystem sharedFilesystem] openFile:self.vocabularyBoxPath error:nil];
+        
+        if (file != nil)
+        {
+            self.vocabularyBox = [NSKeyedUnarchiver unarchiveObjectWithData:[file readData:nil]];
+        }
+        
+        [file close];
+        
+        [self.tableView reloadData];
+        
+        [DejalBezelActivityView currentActivityView].showNetworkActivityIndicator = NO;
+        [DejalBezelActivityView removeView];
+    });
 }
 
 - (void) saveVocabularyBox
 {
-    [NSKeyedArchiver archiveRootObject:self.vocabularyBox toFile:[self pathToVocabularyBox]];
+    [DejalBezelActivityView activityViewForView:self.view withLabel:@"Loading.."];
+    [DejalBezelActivityView currentActivityView].showNetworkActivityIndicator = YES;
+    
+    dispatch_async(dispatch_get_main_queue(), ^
+    {
+        [self updateDropbox];
+        
+        DBFile *file = [[DBFilesystem sharedFilesystem] openFile:self.vocabularyBoxPath error:nil];
+        
+        if (file == nil)
+        {
+            [[DBFilesystem sharedFilesystem] createFile:self.vocabularyBoxPath error:nil];
+        }
+        
+        [file writeData:[NSKeyedArchiver archivedDataWithRootObject:self.vocabularyBox] error:nil];
+        
+        [file close];
+        
+        [DejalBezelActivityView currentActivityView].showNetworkActivityIndicator = NO;
+        [DejalBezelActivityView removeView];
+    });
 }
 
 @end

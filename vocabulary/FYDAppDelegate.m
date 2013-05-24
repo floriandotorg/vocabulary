@@ -8,17 +8,31 @@
 
 #import "FYDAppDelegate.h"
 
+#import <Dropbox/Dropbox.h>
+
 @implementation FYDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+    DBAccountManager* accountMgr = [[DBAccountManager alloc] initWithAppKey:@"h86hdham94t0str" secret:@"b9pgmyavmjf3zpu"];
+    [DBAccountManager setSharedManager:accountMgr];
+    
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url sourceApplication:(NSString *)source annotation:(id)annotation
+{
+    DBAccount *account = [[DBAccountManager sharedManager] handleOpenURL:url];
+    
+    if (account)
     {
-        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-        UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-        splitViewController.delegate = (id)navigationController.topViewController;
+        //NSLog(@"App linked successfully!");
     }
+    else
+    {
+        //NSLog(@"App linked failed!");
+    }
+    
     return YES;
 }
 							

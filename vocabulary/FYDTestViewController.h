@@ -19,6 +19,6 @@
 @interface FYDTestViewController : UIViewController
 
 @property (strong,nonatomic) FYDVocabularyTest *vocableTest;
-@property (weak) id<FYDTestViewControllerDelegate> delegate;
+@property (weak,nonatomic) id<FYDTestViewControllerDelegate> delegate;
 
 @end

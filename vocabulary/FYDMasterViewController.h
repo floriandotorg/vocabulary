@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 #import "FYDTestViewController.h"
+#import "FYDSettingsViewController.h"
 
-@interface FYDMasterViewController : UITableViewController<FYDTestViewControllerDelegate>
+@interface FYDMasterViewController : UITableViewController<FYDTestViewControllerDelegate,FYDSettingsViewControllerDelegate,UIAlertViewDelegate>
 
 @property (strong, nonatomic) FYDTestViewController *detailViewController;
 

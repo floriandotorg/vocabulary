@@ -26,7 +26,23 @@
 {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(applicationWillResignActiveNotification:)
+                                                name:UIApplicationWillResignActiveNotification
+                                              object:nil];
+    
     self.wordLabel.text = self.vocableTest.currentVocable.native;
+}
+
+- (void)endTest:(BOOL)animated
+{
+    [self.delegate testViewControllerDidFinish];
+    [self dismissViewControllerAnimated:animated completion:nil];
+}
+
+- (void)applicationWillResignActiveNotification:(NSNotification*)notification
+{
+    [self endTest:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,10 +53,13 @@
 
 - (void)viewDidUnload
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
     [self setWordLabel:nil];
     [self setCorrectButton:nil];
     [self setWrongButton:nil];
     [self setLabelGestureRecognizer:nil];
+
     [super viewDidUnload];
 }
 
@@ -48,8 +67,7 @@
 {
     if (![self.vocableTest nextVocable])
     {
-        [self.delegate testViewControllerDidFinish];
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self endTest:YES];
     }
     else
     {

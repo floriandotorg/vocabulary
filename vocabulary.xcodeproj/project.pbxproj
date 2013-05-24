@@ -29,6 +29,13 @@
 		1777019E174E628A006F1DE8 /* FYDVocable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1777019D174E628A006F1DE8 /* FYDVocable.m */; };
 		177701A1174E761A006F1DE8 /* FYDVocabularyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 177701A0174E761A006F1DE8 /* FYDVocabularyTest.m */; };
 		177701A6174E931F006F1DE8 /* FYDVocabularyBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 177701A5174E931F006F1DE8 /* FYDVocabularyBox.m */; };
+		178A4B6B174EC68800CFBB3E /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B6A174EC68800CFBB3E /* Dropbox.framework */; };
+		178A4B6D174EC6AD00CFBB3E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B6C174EC6AD00CFBB3E /* CFNetwork.framework */; };
+		178A4B6F174EC6B500CFBB3E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B6E174EC6B500CFBB3E /* Security.framework */; };
+		178A4B71174EC6BC00CFBB3E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B70174EC6BC00CFBB3E /* SystemConfiguration.framework */; };
+		178A4B73174EC6C500CFBB3E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B72174EC6C500CFBB3E /* QuartzCore.framework */; };
+		178A4B79174F65FA00CFBB3E /* FYDSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178A4B78174F65FA00CFBB3E /* FYDSettingsViewController.m */; };
+		17AC3DF7174F8490004D318A /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AC3DF5174F834E004D318A /* DejalActivityView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +83,15 @@
 		177701A0174E761A006F1DE8 /* FYDVocabularyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDVocabularyTest.m; sourceTree = "<group>"; };
 		177701A4174E931F006F1DE8 /* FYDVocabularyBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDVocabularyBox.h; sourceTree = "<group>"; };
 		177701A5174E931F006F1DE8 /* FYDVocabularyBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDVocabularyBox.m; sourceTree = "<group>"; };
+		178A4B6A174EC68800CFBB3E /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
+		178A4B6C174EC6AD00CFBB3E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		178A4B6E174EC6B500CFBB3E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		178A4B70174EC6BC00CFBB3E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		178A4B72174EC6C500CFBB3E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		178A4B77174F65FA00CFBB3E /* FYDSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDSettingsViewController.h; sourceTree = "<group>"; };
+		178A4B78174F65FA00CFBB3E /* FYDSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDSettingsViewController.m; sourceTree = "<group>"; };
+		17AC3DF4174F834E004D318A /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
+		17AC3DF5174F834E004D318A /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +99,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				178A4B73174EC6C500CFBB3E /* QuartzCore.framework in Frameworks */,
+				178A4B71174EC6BC00CFBB3E /* SystemConfiguration.framework in Frameworks */,
+				178A4B6F174EC6B500CFBB3E /* Security.framework in Frameworks */,
+				178A4B6D174EC6AD00CFBB3E /* CFNetwork.framework in Frameworks */,
 				17770156174E51CB006F1DE8 /* UIKit.framework in Frameworks */,
 				17770158174E51CB006F1DE8 /* Foundation.framework in Frameworks */,
 				1777015A174E51CB006F1DE8 /* CoreGraphics.framework in Frameworks */,
+				178A4B6B174EC68800CFBB3E /* Dropbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +145,11 @@
 		17770154174E51CB006F1DE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				178A4B72174EC6C500CFBB3E /* QuartzCore.framework */,
+				178A4B70174EC6BC00CFBB3E /* SystemConfiguration.framework */,
+				178A4B6E174EC6B500CFBB3E /* Security.framework */,
+				178A4B6C174EC6AD00CFBB3E /* CFNetwork.framework */,
+				178A4B6A174EC68800CFBB3E /* Dropbox.framework */,
 				17770155174E51CB006F1DE8 /* UIKit.framework */,
 				17770157174E51CB006F1DE8 /* Foundation.framework */,
 				17770159174E51CB006F1DE8 /* CoreGraphics.framework */,
@@ -149,6 +175,8 @@
 		1777015C174E51CB006F1DE8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				17AC3DF4174F834E004D318A /* DejalActivityView.h */,
+				17AC3DF5174F834E004D318A /* DejalActivityView.m */,
 				1777015D174E51CB006F1DE8 /* vocabulary-Info.plist */,
 				1777015E174E51CB006F1DE8 /* InfoPlist.strings */,
 				17770161174E51CB006F1DE8 /* main.m */,
@@ -201,6 +229,8 @@
 				17770174174E51CB006F1DE8 /* FYDMasterViewController.m */,
 				17770176174E51CB006F1DE8 /* FYDTestViewController.h */,
 				17770177174E51CB006F1DE8 /* FYDTestViewController.m */,
+				178A4B77174F65FA00CFBB3E /* FYDSettingsViewController.h */,
+				178A4B78174F65FA00CFBB3E /* FYDSettingsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -334,6 +364,8 @@
 				1777019E174E628A006F1DE8 /* FYDVocable.m in Sources */,
 				177701A1174E761A006F1DE8 /* FYDVocabularyTest.m in Sources */,
 				177701A6174E931F006F1DE8 /* FYDVocabularyBox.m in Sources */,
+				178A4B79174F65FA00CFBB3E /* FYDSettingsViewController.m in Sources */,
+				17AC3DF7174F8490004D318A /* DejalActivityView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +476,10 @@
 		17770191174E51CC006F1DE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vocabulary/vocabulary-Prefix.pch";
 				INFOPLIST_FILE = "vocabulary/vocabulary-Info.plist";
@@ -457,6 +493,10 @@
 		17770192174E51CC006F1DE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vocabulary/vocabulary-Prefix.pch";
 				INFOPLIST_FILE = "vocabulary/vocabulary-Info.plist";
