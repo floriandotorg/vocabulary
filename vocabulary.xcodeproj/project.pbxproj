@@ -35,7 +35,6 @@
 		178A4B71174EC6BC00CFBB3E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B70174EC6BC00CFBB3E /* SystemConfiguration.framework */; };
 		178A4B73174EC6C500CFBB3E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B72174EC6C500CFBB3E /* QuartzCore.framework */; };
 		178A4B79174F65FA00CFBB3E /* FYDSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178A4B78174F65FA00CFBB3E /* FYDSettingsViewController.m */; };
-		17AC3DF7174F8490004D318A /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AC3DF5174F834E004D318A /* DejalActivityView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,8 +89,6 @@
 		178A4B72174EC6C500CFBB3E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		178A4B77174F65FA00CFBB3E /* FYDSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDSettingsViewController.h; sourceTree = "<group>"; };
 		178A4B78174F65FA00CFBB3E /* FYDSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDSettingsViewController.m; sourceTree = "<group>"; };
-		17AC3DF4174F834E004D318A /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
-		17AC3DF5174F834E004D318A /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +172,6 @@
 		1777015C174E51CB006F1DE8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				17AC3DF4174F834E004D318A /* DejalActivityView.h */,
-				17AC3DF5174F834E004D318A /* DejalActivityView.m */,
 				1777015D174E51CB006F1DE8 /* vocabulary-Info.plist */,
 				1777015E174E51CB006F1DE8 /* InfoPlist.strings */,
 				17770161174E51CB006F1DE8 /* main.m */,
@@ -365,7 +360,6 @@
 				177701A1174E761A006F1DE8 /* FYDVocabularyTest.m in Sources */,
 				177701A6174E931F006F1DE8 /* FYDVocabularyBox.m in Sources */,
 				178A4B79174F65FA00CFBB3E /* FYDSettingsViewController.m in Sources */,
-				17AC3DF7174F8490004D318A /* DejalActivityView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

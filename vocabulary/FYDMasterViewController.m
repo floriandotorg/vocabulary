@@ -10,8 +10,6 @@
 
 #import <Dropbox/Dropbox.h>
 
-#import "DejalActivityView.h"
-
 #import "FYDTestViewController.h"
 
 #import "FYDStageCell.h"
@@ -195,52 +193,34 @@
 
 - (void) loadVocabularyBox
 {
-    [DejalBezelActivityView activityViewForView:self.view withLabel:@"Loading.."];
-    [DejalBezelActivityView currentActivityView].showNetworkActivityIndicator = YES;
+    [self updateDropbox];
     
-    dispatch_async(dispatch_get_main_queue(), ^
+    DBFile *file = [[DBFilesystem sharedFilesystem] openFile:self.vocabularyBoxPath error:nil];
+    
+    if (file != nil)
     {
-        [self updateDropbox];
-        
-        DBFile *file = [[DBFilesystem sharedFilesystem] openFile:self.vocabularyBoxPath error:nil];
-        
-        if (file != nil)
-        {
-            self.vocabularyBox = [NSKeyedUnarchiver unarchiveObjectWithData:[file readData:nil]];
-        }
-        
-        [file close];
-        
-        [self.tableView reloadData];
-        
-        [DejalBezelActivityView currentActivityView].showNetworkActivityIndicator = NO;
-        [DejalBezelActivityView removeView];
-    });
+        self.vocabularyBox = [NSKeyedUnarchiver unarchiveObjectWithData:[file readData:nil]];
+    }
+    
+    [file close];
+    
+    [self.tableView reloadData];
 }
 
 - (void) saveVocabularyBox
 {
-    [DejalBezelActivityView activityViewForView:self.view withLabel:@"Loading.."];
-    [DejalBezelActivityView currentActivityView].showNetworkActivityIndicator = YES;
+    [self updateDropbox];
     
-    dispatch_async(dispatch_get_main_queue(), ^
+    DBFile *file = [[DBFilesystem sharedFilesystem] openFile:self.vocabularyBoxPath error:nil];
+    
+    if (file == nil)
     {
-        [self updateDropbox];
-        
-        DBFile *file = [[DBFilesystem sharedFilesystem] openFile:self.vocabularyBoxPath error:nil];
-        
-        if (file == nil)
-        {
-            [[DBFilesystem sharedFilesystem] createFile:self.vocabularyBoxPath error:nil];
-        }
-        
-        [file writeData:[NSKeyedArchiver archivedDataWithRootObject:self.vocabularyBox] error:nil];
-        
-        [file close];
-        
-        [DejalBezelActivityView currentActivityView].showNetworkActivityIndicator = NO;
-        [DejalBezelActivityView removeView];
-    });
+        [[DBFilesystem sharedFilesystem] createFile:self.vocabularyBoxPath error:nil];
+    }
+    
+    [file writeData:[NSKeyedArchiver archivedDataWithRootObject:self.vocabularyBox] error:nil];
+    
+    [file close];
 }
 
 @end
