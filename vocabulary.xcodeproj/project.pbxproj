@@ -40,6 +40,8 @@
 		17B2E204175122C000505428 /* iSpeechSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E203175122C000505428 /* iSpeechSDK.bundle */; };
 		17B2E2061751230E00505428 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B2E2051751230E00505428 /* AudioToolbox.framework */; };
 		17B2E2081751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E2071751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png */; };
+		17B2E20E17512BC700505428 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E20D17512BC700505428 /* icon_114.png */; };
+		17B2E21017512BCD00505428 /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E20F17512BCD00505428 /* icon_57.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		17B2E203175122C000505428 /* iSpeechSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iSpeechSDK.bundle; sourceTree = "<group>"; };
 		17B2E2051751230E00505428 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		17B2E2071751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png"; sourceTree = "<group>"; };
+		17B2E20D17512BC700505428 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_114.png; path = ../icon_114.png; sourceTree = "<group>"; };
+		17B2E20F17512BCD00505428 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_57.png; path = ../icon_57.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +145,6 @@
 		17770149174E51CB006F1DE8 = {
 			isa = PBXGroup;
 			children = (
-				17B2E2051751230E00505428 /* AudioToolbox.framework */,
 				1777015B174E51CB006F1DE8 /* vocabulary */,
 				17770185174E51CC006F1DE8 /* vocabularyTests */,
 				17770154174E51CB006F1DE8 /* Frameworks */,
@@ -161,6 +164,7 @@
 		17770154174E51CB006F1DE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17B2E2051751230E00505428 /* AudioToolbox.framework */,
 				17B2E1FA1751229E00505428 /* libiSpeechSDK.a */,
 				178A4B72174EC6C500CFBB3E /* QuartzCore.framework */,
 				178A4B70174EC6BC00CFBB3E /* SystemConfiguration.framework */,
@@ -199,9 +203,6 @@
 				1777015E174E51CB006F1DE8 /* InfoPlist.strings */,
 				17770161174E51CB006F1DE8 /* main.m */,
 				17770163174E51CB006F1DE8 /* vocabulary-Prefix.pch */,
-				17770167174E51CB006F1DE8 /* Default.png */,
-				17770169174E51CB006F1DE8 /* Default@2x.png */,
-				1777016B174E51CB006F1DE8 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -265,6 +266,11 @@
 		17AC732D174F97C200921E25 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				17B2E20F17512BCD00505428 /* icon_57.png */,
+				17B2E20D17512BC700505428 /* icon_114.png */,
+				17770167174E51CB006F1DE8 /* Default.png */,
+				17770169174E51CB006F1DE8 /* Default@2x.png */,
+				1777016B174E51CB006F1DE8 /* Default-568h@2x.png */,
 				17B2E2071751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png */,
 				17AC732B174F97BE00921E25 /* Speaker.png */,
 			);
@@ -364,6 +370,8 @@
 				17AC732C174F97BE00921E25 /* Speaker.png in Resources */,
 				17B2E204175122C000505428 /* iSpeechSDK.bundle in Resources */,
 				17B2E2081751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png in Resources */,
+				17B2E20E17512BC700505428 /* icon_114.png in Resources */,
+				17B2E21017512BCD00505428 /* icon_57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
