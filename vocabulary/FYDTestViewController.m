@@ -17,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *correctButton;
 @property (weak, nonatomic) IBOutlet UIButton *wrongButton;
 @property (weak, nonatomic) IBOutlet UITapGestureRecognizer *labelGestureRecognizer;
+@property (weak, nonatomic) IBOutlet UIButton *speakerButton;
+
+@property (strong, nonatomic) ISSpeechSynthesis *speechSynthesis;
 
 @end
 
@@ -26,12 +29,17 @@
 {
     [super viewDidLoad];
     
+    self.speechSynthesis = [[ISSpeechSynthesis alloc] init];
+    self.speechSynthesis.delegate = self;
+    
     [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(applicationWillResignActiveNotification:)
                                                 name:UIApplicationWillResignActiveNotification
                                               object:nil];
     
-    self.wordLabel.text = self.vocableTest.currentVocable.native;
+    self.wordLabel.text = self.vocableTest.currentVocable.foreign;
+    self.speechSynthesis.text = self.vocableTest.currentVocable.foreign;
+    self.speechSynthesis.voice = ISVoiceUSEnglishFemale;
 }
 
 - (void)endTest:(BOOL)animated
@@ -60,7 +68,13 @@
     [self setWrongButton:nil];
     [self setLabelGestureRecognizer:nil];
 
+    [self setSpeakerButton:nil];
     [super viewDidUnload];
+}
+
+- (IBAction)speakerButtonClick:(UIButton *)sender
+{
+    [self.speechSynthesis speak:nil];
 }
 
 - (void)nextVocable
@@ -71,7 +85,10 @@
     }
     else
     {
-        self.wordLabel.text = self.vocableTest.currentVocable.native;
+        self.speechSynthesis.text = self.vocableTest.currentVocable.foreign;
+        self.speechSynthesis.voice = ISVoiceUSEnglishFemale;
+        
+        self.wordLabel.text = self.vocableTest.currentVocable.foreign;
         self.correctButton.hidden = YES;
         self.wrongButton.hidden = YES;
         self.labelGestureRecognizer.enabled = YES;
@@ -92,8 +109,23 @@
 
 - (void)wordAnimationDidStop
 {
+    self.speechSynthesis.text = self.vocableTest.currentVocable.native;
+    self.speechSynthesis.voice = ISVoiceEURGermanFemale;
+    
     self.correctButton.hidden = NO;
     self.wrongButton.hidden = NO;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    if (CGRectContainsPoint(self.wordLabel.frame, [touch locationInView:self.view]) && !CGRectContainsPoint(self.speakerButton.frame, [touch locationInView:self.view]) )
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
 }
 
 - (IBAction)handleTap:(UITapGestureRecognizer *)sender
@@ -103,10 +135,10 @@
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDidStopSelector:@selector(wordAnimationDidStop)];
-	[UIView setAnimationDuration:0.5];
-	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.wordLabel cache:YES];
-    self.wordLabel.text = self.vocableTest.currentVocable.foreign;
-	[UIView commitAnimations];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.wordLabel cache:YES];
+    self.wordLabel.text = self.vocableTest.currentVocable.native;
+    [UIView commitAnimations];
 }
 
 @end

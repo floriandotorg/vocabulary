@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol FYDSettingsViewControllerDelegate
+@protocol FYDSettingsViewControllerDelegate<NSObject>
 
 - (void)settingsViewControllerDidFinish;
 
 @end
 
-@interface FYDSettingsViewController : UITableViewController
+@interface FYDSettingsViewController : UITableViewController<UIGestureRecognizerDelegate>
 
 @property (weak,nonatomic) id<FYDSettingsViewControllerDelegate> delegate;
 
