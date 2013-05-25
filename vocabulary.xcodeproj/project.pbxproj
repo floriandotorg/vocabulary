@@ -39,6 +39,7 @@
 		17B2E1FB1751229E00505428 /* libiSpeechSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B2E1FA1751229E00505428 /* libiSpeechSDK.a */; };
 		17B2E204175122C000505428 /* iSpeechSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E203175122C000505428 /* iSpeechSDK.bundle */; };
 		17B2E2061751230E00505428 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B2E2051751230E00505428 /* AudioToolbox.framework */; };
+		17B2E2081751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E2071751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		17B2E202175122B300505428 /* ISSpeechSynthesisVoices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSpeechSynthesisVoices.h; sourceTree = "<group>"; };
 		17B2E203175122C000505428 /* iSpeechSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iSpeechSDK.bundle; sourceTree = "<group>"; };
 		17B2E2051751230E00505428 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		17B2E2071751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +265,7 @@
 		17AC732D174F97C200921E25 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				17B2E2071751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png */,
 				17AC732B174F97BE00921E25 /* Speaker.png */,
 			);
 			name = Images;
@@ -360,6 +363,7 @@
 				1777016F174E51CB006F1DE8 /* MainStoryboard_iPhone.storyboard in Resources */,
 				17AC732C174F97BE00921E25 /* Speaker.png in Resources */,
 				17B2E204175122C000505428 /* iSpeechSDK.bundle in Resources */,
+				17B2E2081751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

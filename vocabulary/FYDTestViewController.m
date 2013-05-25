@@ -94,6 +94,10 @@
         self.labelGestureRecognizer.enabled = YES;
     }
 }
+- (IBAction)stopButtonClick:(UIButton *)sender
+{
+    [self endTest:YES];
+}
 
 - (IBAction)correctButtonClick:(UIButton *)sender
 {
