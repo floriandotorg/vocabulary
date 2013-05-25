@@ -8,6 +8,8 @@
 
 #import "FYDAddWordViewController.h"
 
+#import "NSString+Empty.h"
+
 @interface FYDAddWordViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *nativeTextField;
@@ -43,14 +45,26 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)doneButtonClick:(UIBarButtonItem *)sender
+- (void)newWord
 {
-    [self.delegate addWordControllerDidFinishNative:self.nativeTextField.text Foreign:self.foreignTextField.text];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if (![self.nativeTextField.text isEmpty] && ![self.foreignTextField.text isEmpty])
+    {
+        [self.delegate addWordNewWordNative:self.nativeTextField.text Foreign:self.foreignTextField.text];
+        self.nativeTextField.text = @"";
+        self.foreignTextField.text = @"";
+    }
 }
 
-- (IBAction)cancelButtonClick:(UIBarButtonItem *)sender
+- (IBAction)nextButtonClick:(UIBarButtonItem *)sender
 {
+    [self newWord];
+}
+
+- (IBAction)doneButtonClick:(UIBarButtonItem *)sender
+{
+    [self newWord];
+    
+    [self.delegate addWordViewControllerDidFinish];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

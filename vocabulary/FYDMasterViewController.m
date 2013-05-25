@@ -84,9 +84,13 @@
     [self.tableView reloadData];
 }
 
-- (void)addWordControllerDidFinishNative:(NSString *)native Foreign:(NSString *)foreign
+- (void)addWordNewWordNative:(NSString *)native Foreign:(NSString *)foreign
 {
     [[self.vocabularyBox stageAt:0] addVocable:[[FYDVocable alloc] initWithNative:native AndForeign:foreign AndStage:[self.vocabularyBox stageAt:0]]];
+}
+
+- (void)addWordViewControllerDidFinish
+{
     [self saveVocabularyBox];
     [self.tableView reloadData];
 }
