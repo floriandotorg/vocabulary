@@ -10,8 +10,9 @@
 
 #import "FYDTestViewController.h"
 #import "FYDSettingsViewController.h"
+#import "FYDAddWordViewController.h"
 
-@interface FYDMasterViewController : UITableViewController<FYDTestViewControllerDelegate,FYDSettingsViewControllerDelegate,UIAlertViewDelegate>
+@interface FYDMasterViewController : UITableViewController<FYDTestViewControllerDelegate,FYDSettingsViewControllerDelegate,FYDAddWordControllerDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) FYDTestViewController *detailViewController;
 

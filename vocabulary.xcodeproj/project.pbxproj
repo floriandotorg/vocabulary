@@ -42,6 +42,8 @@
 		17B2E2081751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E2071751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png */; };
 		17B2E20E17512BC700505428 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E20D17512BC700505428 /* icon_114.png */; };
 		17B2E21017512BCD00505428 /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E20F17512BCD00505428 /* icon_57.png */; };
+		17B2E21317512FFE00505428 /* FYDAddWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B2E21217512FFD00505428 /* FYDAddWordViewController.m */; };
+		17B2E2161751345700505428 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B2E2151751345700505428 /* NSMutableArray+Shuffle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,10 @@
 		17B2E2071751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png"; sourceTree = "<group>"; };
 		17B2E20D17512BC700505428 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_114.png; path = ../icon_114.png; sourceTree = "<group>"; };
 		17B2E20F17512BCD00505428 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_57.png; path = ../icon_57.png; sourceTree = "<group>"; };
+		17B2E21117512FFD00505428 /* FYDAddWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDAddWordViewController.h; sourceTree = "<group>"; };
+		17B2E21217512FFD00505428 /* FYDAddWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDAddWordViewController.m; sourceTree = "<group>"; };
+		17B2E2141751345700505428 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
+		17B2E2151751345700505428 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +195,7 @@
 				177701A2174E8019006F1DE8 /* Model */,
 				177701A7174E995E006F1DE8 /* View */,
 				17AC732D174F97C200921E25 /* Images */,
-				17B2E1FC175122A200505428 /* iSpeech */,
+				17B2E1FC175122A200505428 /* Headers */,
 				1777015C174E51CB006F1DE8 /* Supporting Files */,
 			);
 			path = vocabulary;
@@ -250,6 +256,8 @@
 				17770177174E51CB006F1DE8 /* FYDTestViewController.m */,
 				178A4B77174F65FA00CFBB3E /* FYDSettingsViewController.h */,
 				178A4B78174F65FA00CFBB3E /* FYDSettingsViewController.m */,
+				17B2E21117512FFD00505428 /* FYDAddWordViewController.h */,
+				17B2E21217512FFD00505428 /* FYDAddWordViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -277,9 +285,11 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
-		17B2E1FC175122A200505428 /* iSpeech */ = {
+		17B2E1FC175122A200505428 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				17B2E2141751345700505428 /* NSMutableArray+Shuffle.h */,
+				17B2E2151751345700505428 /* NSMutableArray+Shuffle.m */,
 				17B2E1FD175122B300505428 /* iSpeechSDK.h */,
 				17B2E1FE175122B300505428 /* ISSpeechRecognition.h */,
 				17B2E1FF175122B300505428 /* ISSpeechRecognitionLocales.h */,
@@ -287,7 +297,7 @@
 				17B2E201175122B300505428 /* ISSpeechSynthesis.h */,
 				17B2E202175122B300505428 /* ISSpeechSynthesisVoices.h */,
 			);
-			name = iSpeech;
+			name = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +426,8 @@
 				177701A1174E761A006F1DE8 /* FYDVocabularyTest.m in Sources */,
 				177701A6174E931F006F1DE8 /* FYDVocabularyBox.m in Sources */,
 				178A4B79174F65FA00CFBB3E /* FYDSettingsViewController.m in Sources */,
+				17B2E21317512FFE00505428 /* FYDAddWordViewController.m in Sources */,
+				17B2E2161751345700505428 /* NSMutableArray+Shuffle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

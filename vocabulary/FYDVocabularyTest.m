@@ -8,6 +8,8 @@
 
 #import "FYDVocabularyTest.h"
 
+#import "NSMutableArray+Shuffle.h"
+
 #import "FYDVocable.h"
 #import "FYDVocabularyBox.h"
 
@@ -27,7 +29,7 @@
     if (self = [super init])
     {
         self.vocabularyBox = box;
-        self.vocabularies = [vocabularies copy];
+        self.vocabularies = [[vocabularies mutableCopy] shuffle];
         self.enumerator = [self.vocabularies objectEnumerator];
         [self nextVocable];
     }

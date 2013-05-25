@@ -68,38 +68,6 @@
     [self loadVocabularyBox];
 }
 
-- (IBAction)plusClick:(UIBarButtonItem *)sender
-{
-    self.vocabularyBox = [[FYDVocabularyBox alloc] init];
-    
-    {
-        FYDStage *stage = [self.vocabularyBox addStage];
-        [stage createVocableWithNative:@"Haus" AndForeign:@"House"];
-        [stage createVocableWithNative:@"Teppich" AndForeign:@"Carpet"];
-        [stage createVocableWithNative:@"Auto" AndForeign:@"Car"];
-    }
-    
-    {
-        FYDStage *stage = [self.vocabularyBox addStage];
-        [stage createVocableWithNative:@"Urlaub" AndForeign:@"Holiday"];
-        [stage createVocableWithNative:@"Wohnwagen" AndForeign:@"Camper"];
-        [stage createVocableWithNative:@"Handy" AndForeign:@"Cellphone"];
-        [stage createVocableWithNative:@"Käfig" AndForeign:@"Cage"];
-    }
-    
-    {
-        FYDStage *stage = [self.vocabularyBox addStage];
-        [stage createVocableWithNative:@"füttern" AndForeign:@"to feed"];
-    }
-    
-    {
-        [self.vocabularyBox addStage];
-    }
-    
-    [self saveVocabularyBox];
-    [self.tableView reloadData];
-}
-
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     [self performSegueWithIdentifier:@"modalToSettings" sender:self];
@@ -112,6 +80,13 @@
 
 - (void)testViewControllerDidFinish
 {
+    [self saveVocabularyBox];
+    [self.tableView reloadData];
+}
+
+- (void)addWordControllerDidFinishNative:(NSString *)native Foreign:(NSString *)foreign
+{
+    [[self.vocabularyBox stageAt:0] addVocable:[[FYDVocable alloc] initWithNative:native AndForeign:foreign AndStage:[self.vocabularyBox stageAt:0]]];
     [self saveVocabularyBox];
     [self.tableView reloadData];
 }
@@ -157,6 +132,11 @@
     else if ([[segue identifier] isEqualToString:@"modalToSettings"])
     {
         FYDSettingsViewController *viewController = [[segue.destinationViewController viewControllers] objectAtIndex:0];
+        viewController.delegate = self;
+    }
+    else if ([[segue identifier] isEqualToString:@"modalToAddWord"])
+    {
+        FYDAddWordViewController *viewController = [[segue.destinationViewController viewControllers] objectAtIndex:0];
         viewController.delegate = self;
     }
 }
