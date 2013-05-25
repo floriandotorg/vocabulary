@@ -44,6 +44,7 @@
 		17B2E21017512BCD00505428 /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E20F17512BCD00505428 /* icon_57.png */; };
 		17B2E21317512FFE00505428 /* FYDAddWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B2E21217512FFD00505428 /* FYDAddWordViewController.m */; };
 		17B2E2161751345700505428 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B2E2151751345700505428 /* NSMutableArray+Shuffle.m */; };
+		17B2E21817513AA800505428 /* trashbin_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E21717513AA800505428 /* trashbin_empty.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		17B2E21217512FFD00505428 /* FYDAddWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDAddWordViewController.m; sourceTree = "<group>"; };
 		17B2E2141751345700505428 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
 		17B2E2151751345700505428 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
+		17B2E21717513AA800505428 /* trashbin_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trashbin_empty.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 		17AC732D174F97C200921E25 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				17B2E21717513AA800505428 /* trashbin_empty.png */,
 				17B2E20F17512BCD00505428 /* icon_57.png */,
 				17B2E20D17512BC700505428 /* icon_114.png */,
 				17770167174E51CB006F1DE8 /* Default.png */,
@@ -382,6 +385,7 @@
 				17B2E2081751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png in Resources */,
 				17B2E20E17512BC700505428 /* icon_114.png in Resources */,
 				17B2E21017512BCD00505428 /* icon_57.png in Resources */,
+				17B2E21817513AA800505428 /* trashbin_empty.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

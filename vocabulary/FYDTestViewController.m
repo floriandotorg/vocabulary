@@ -99,6 +99,12 @@
     [self endTest:YES];
 }
 
+- (IBAction)trashButtonClick:(UIButton *)sender
+{
+    [self.vocableTest deleteCurrent];
+    [self nextVocable];
+}
+
 - (IBAction)correctButtonClick:(UIButton *)sender
 {
     [self.vocableTest currentCorrect];

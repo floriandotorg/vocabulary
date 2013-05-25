@@ -20,6 +20,8 @@
 - (void)currentWrong;
 - (void)currentCorrect;
 
+- (void)deleteCurrent;
+
 @property (readonly) FYDVocable *currentVocable;
 
 @end

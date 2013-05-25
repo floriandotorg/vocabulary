@@ -10,6 +10,7 @@
 
 #import "NSMutableArray+Shuffle.h"
 
+#import "FYDStage.h"
 #import "FYDVocable.h"
 #import "FYDVocabularyBox.h"
 
@@ -49,6 +50,11 @@
 - (void)currentCorrect
 {
     [self.vocabularyBox putIntoNextStage:self.currentVocable];
+}
+
+- (void)deleteCurrent
+{
+    [self.currentVocable.stage removeVocable:self.currentVocable];
 }
 
 @end
