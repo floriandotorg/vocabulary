@@ -16,12 +16,14 @@
 
 - (id) init;
 
-- (FYDStage*) addStage;
+- (FYDStage*)addStage;
 
-- (NSInteger) stageCount;
-- (FYDStage*) stageAt:(NSInteger)stageNo;
+- (NSInteger)stageCount;
+- (FYDStage*)stageAt:(NSInteger)stageNo;
 
-- (FYDVocabularyTest*) vocabularyTestForStage:(NSInteger)stageNo;
+#ifndef FYD_NO_VOCABULARY_TEST
+- (FYDVocabularyTest*)vocabularyTestForStage:(NSInteger)stageNo;
+#endif
 
 - (void)putIntoFirstStage:(FYDVocable*)vocable;
 - (void)putIntoNextStage:(FYDVocable*)vocable;

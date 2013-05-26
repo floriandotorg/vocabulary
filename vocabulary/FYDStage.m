@@ -9,7 +9,10 @@
 #import "FYDStage.h"
 
 #import "FYDVocable.h"
+
+#ifndef FYD_NO_VOCABULARY_TEST
 #import "FYDVocabularyTest.h"
+#endif
 
 @interface FYDStage ()
 
@@ -20,7 +23,7 @@
 
 @implementation FYDStage
 
-- (id)initWithNo:(int)no;
+- (id)initWithNo:(NSInteger)no;
 {
     if (self = [super init])
     {
@@ -52,10 +55,17 @@
     return self.vocabularies.count;
 }
 
+- (FYDVocable*)vocableAt:(NSInteger)vocableNo
+{
+    return self.vocabularies[vocableNo];
+}
+
+#ifndef FYD_NO_VOCABULARY_TEST
 - (FYDVocabularyTest*)vocabularyTestWithBox:(FYDVocabularyBox*)box
 {
     return [[FYDVocabularyTest alloc] initWithVocabularies:self.vocabularies AndVocabularyBox:box];
 }
+#endif
 
 #pragma mark - Persistent State
 

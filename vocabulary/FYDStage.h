@@ -9,22 +9,25 @@
 #import <Foundation/Foundation.h>
 
 @class FYDVocable;
-@class FYDVocabularyTest;
 @class FYDVocabularyBox;
+@class FYDVocabularyTest;
 
 @interface FYDStage : NSObject
 
 @property (readonly,nonatomic) int no;
 
-- (id)initWithNo:(int)no;
+- (id)initWithNo:(NSInteger)no;
 
 - (NSInteger)vocabularyCount;
+- (FYDVocable*)vocableAt:(NSInteger)vocableNo;
 
 - (void)createVocableWithNative:(NSString*)native AndForeign:(NSString*)foreign;
 
 - (void)addVocable:(FYDVocable*)vocable;
 - (void)removeVocable:(FYDVocable*)vocable;
 
+#ifndef FYD_NO_VOCABULARY_TEST
 - (FYDVocabularyTest*)vocabularyTestWithBox:(FYDVocabularyBox*)box;
+#endif
 
 @end

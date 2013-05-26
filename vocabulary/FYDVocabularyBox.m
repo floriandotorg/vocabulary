@@ -10,7 +10,10 @@
 
 #import "FYDStage.h"
 #import "FYDVocable.h"
+
+#ifndef FYD_NO_VOCABULARY_TEST
 #import "FYDVocabularyTest.h"
+#endif
 
 @interface FYDVocabularyBox ()
 
@@ -22,7 +25,7 @@
 
 @implementation FYDVocabularyBox
 
-- (id) init
+- (id)init
 {
     if (self = [super init])
     {
@@ -32,27 +35,29 @@
     return self;
 }
 
-- (FYDStage*) addStage
+- (FYDStage*)addStage
 {
     FYDStage *stage = [[FYDStage alloc] initWithNo:++self.lastStageNo];
     [self.stages addObject:stage];
     return stage;
 }
 
-- (NSInteger) stageCount
+- (NSInteger)stageCount
 {
     return self.stages.count;
 }
 
-- (FYDStage*) stageAt:(NSInteger)stageNo
+- (FYDStage*)stageAt:(NSInteger)stageNo
 {
     return self.stages[stageNo];
 }
 
-- (FYDVocabularyTest*) vocabularyTestForStage:(NSInteger)stageNo
+#ifndef FYD_NO_VOCABULARY_TEST
+- (FYDVocabularyTest*)vocabularyTestForStage:(NSInteger)stageNo
 {
     return [[self stageAt:stageNo] vocabularyTestWithBox:self];
 }
+#endif
 
 - (void)putIntoFirstStage:(FYDVocable*)vocable
 {
