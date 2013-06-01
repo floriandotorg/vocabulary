@@ -8,6 +8,7 @@
 
 #import "FYDMasterViewController.h"
 
+#import "DejalActivityView.h"
 #import <Dropbox/Dropbox.h>
 
 #import "FYDTestViewController.h"
@@ -20,7 +21,10 @@
 
 @interface FYDMasterViewController ()
 
-@property (strong,nonatomic) FYDVocabularyBox *vocabularyBox;
+@property (strong, nonatomic) FYDVocabularyBox *vocabularyBox;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *plusBotton;
+@property (strong, nonatomic) DBFile *file;
+@property (weak, nonatomic) FYDTestViewController *currentTest;
 
 @end
 
@@ -31,27 +35,69 @@
     [super awakeFromNib];
 }
 
+- (BOOL)updateActivityView
+{
+    [self updateDropbox];
+    
+    if ([[DBFilesystem sharedFilesystem] status] != DBSyncStatusOnline)
+    {
+        if ([DejalBezelActivityView currentActivityView] == nil)
+        {
+            [DejalBezelActivityView activityViewForView:self.view withLabel:@"Syncing .."];
+        }
+        
+        self.plusBotton.enabled = NO;
+        
+        return NO;
+    }
+    else
+    {
+        if ([DejalBezelActivityView currentActivityView] != nil)
+        {
+            [DejalBezelActivityView removeView];
+        }
+        
+        self.plusBotton.enabled = YES;
+        
+        return YES;
+    }
+}
+
+- (void)waitForSync
+{
+    if (self.currentTest != nil)
+    {
+        [self.currentTest abort];
+    }
+    
+    if ([self updateActivityView] && [self.file update:nil])
+    {
+        [self loadVocabularyBox];
+    }
+    else
+    {
+        [self performSelector:@selector(waitForSync) withObject:self afterDelay:0.5];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     [self updateDropbox];
     
-    [[DBFilesystem sharedFilesystem] addObserver:self forPath:self.vocabularyBoxPath block:^
-     {
-         [self loadVocabularyBox];
-     }];
-    
     [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(applicationDidBecomeActive:)
                                                 name:UIApplicationDidBecomeActiveNotification
                                               object:nil];
+    [self waitForSync];
 }
 
 - (void)viewDidUnload
 {
-    [[DBFilesystem sharedFilesystem] removeObserver:self];
+    [self.file removeObserver:self];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self setPlusBotton:nil];
     [super viewDidUnload];
 }
 
@@ -65,7 +111,7 @@
 
 - (void)applicationDidBecomeActive:(NSNotification*)notification
 {
-    [self loadVocabularyBox];
+    [self updateActivityView];
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
@@ -80,6 +126,7 @@
 
 - (void)testViewControllerDidFinish
 {
+    self.currentTest = nil;
     [self saveVocabularyBox];
     [self.tableView reloadData];
 }
@@ -129,6 +176,8 @@
     {
         FYDTestViewController *viewController = [[segue.destinationViewController viewControllers] objectAtIndex:0];
         
+        self.currentTest = viewController;
+        
         viewController.vocableTest = [self.vocabularyBox vocabularyTestForStage:[self.tableView indexPathForSelectedRow].row];
         
         viewController.delegate = self;
@@ -167,6 +216,22 @@
             DBFilesystem *filesystem = [[DBFilesystem alloc] initWithAccount:account];
             [DBFilesystem setSharedFilesystem:filesystem];
         }
+        
+        if (self.file == nil)
+        {
+            self.file = [[DBFilesystem sharedFilesystem] openFile:self.vocabularyBoxPath error:nil];
+            
+            if (self.file == nil)
+            {
+                self.file = [[DBFilesystem sharedFilesystem] createFile:self.vocabularyBoxPath error:nil];
+            }
+            
+            __block FYDMasterViewController *block_self = self;
+            [self.file addObserver:self block:^
+                {
+                    [block_self waitForSync];
+                }];
+        }
     }
 }
 
@@ -178,15 +243,8 @@
 - (void) loadVocabularyBox
 {
     [self updateDropbox];
-    
-    DBFile *file = [[DBFilesystem sharedFilesystem] openFile:self.vocabularyBoxPath error:nil];
-    
-    if (file != nil)
-    {
-        self.vocabularyBox = [NSKeyedUnarchiver unarchiveObjectWithData:[file readData:nil]];
-    }
-    
-    [file close];
+
+    self.vocabularyBox = [NSKeyedUnarchiver unarchiveObjectWithData:[self.file readData:nil]];
     
     [self.tableView reloadData];
 }
@@ -195,16 +253,7 @@
 {
     [self updateDropbox];
     
-    DBFile *file = [[DBFilesystem sharedFilesystem] openFile:self.vocabularyBoxPath error:nil];
-    
-    if (file == nil)
-    {
-        [[DBFilesystem sharedFilesystem] createFile:self.vocabularyBoxPath error:nil];
-    }
-    
-    [file writeData:[NSKeyedArchiver archivedDataWithRootObject:self.vocabularyBox] error:nil];
-    
-    [file close];
+    [self.file writeData:[NSKeyedArchiver archivedDataWithRootObject:self.vocabularyBox] error:nil];
 }
 
 @end

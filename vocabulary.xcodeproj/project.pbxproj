@@ -29,6 +29,7 @@
 		1777019E174E628A006F1DE8 /* FYDVocable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1777019D174E628A006F1DE8 /* FYDVocable.m */; };
 		177701A1174E761A006F1DE8 /* FYDVocabularyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 177701A0174E761A006F1DE8 /* FYDVocabularyTest.m */; };
 		177701A6174E931F006F1DE8 /* FYDVocabularyBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 177701A5174E931F006F1DE8 /* FYDVocabularyBox.m */; };
+		17885BD4175A2A5E000B14C3 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17885BD3175A2A5E000B14C3 /* DejalActivityView.m */; };
 		178A4B6B174EC68800CFBB3E /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B6A174EC68800CFBB3E /* Dropbox.framework */; };
 		178A4B6D174EC6AD00CFBB3E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B6C174EC6AD00CFBB3E /* CFNetwork.framework */; };
 		178A4B6F174EC6B500CFBB3E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B6E174EC6B500CFBB3E /* Security.framework */; };
@@ -93,6 +94,8 @@
 		177701A0174E761A006F1DE8 /* FYDVocabularyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDVocabularyTest.m; sourceTree = "<group>"; };
 		177701A4174E931F006F1DE8 /* FYDVocabularyBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDVocabularyBox.h; sourceTree = "<group>"; };
 		177701A5174E931F006F1DE8 /* FYDVocabularyBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDVocabularyBox.m; sourceTree = "<group>"; };
+		17885BD2175A2A5E000B14C3 /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
+		17885BD3175A2A5E000B14C3 /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		178A4B6A174EC68800CFBB3E /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
 		178A4B6C174EC6AD00CFBB3E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		178A4B6E174EC6B500CFBB3E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -294,6 +297,8 @@
 		17B2E1FC175122A200505428 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				17885BD2175A2A5E000B14C3 /* DejalActivityView.h */,
+				17885BD3175A2A5E000B14C3 /* DejalActivityView.m */,
 				17B2E2141751345700505428 /* NSMutableArray+Shuffle.h */,
 				17B2E2151751345700505428 /* NSMutableArray+Shuffle.m */,
 				17B2E1FD175122B300505428 /* iSpeechSDK.h */,
@@ -438,6 +443,7 @@
 				17B2E21317512FFE00505428 /* FYDAddWordViewController.m in Sources */,
 				17B2E2161751345700505428 /* NSMutableArray+Shuffle.m in Sources */,
 				17B2E21B17513E5C00505428 /* NSString+Empty.m in Sources */,
+				17885BD4175A2A5E000B14C3 /* DejalActivityView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

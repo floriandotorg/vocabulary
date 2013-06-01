@@ -42,6 +42,11 @@
     self.speechSynthesis.voice = ISVoiceUSEnglishFemale;
 }
 
+- (void)abort
+{
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
+
 - (void)endTest:(BOOL)animated
 {
     [self.delegate testViewControllerDidFinish];
