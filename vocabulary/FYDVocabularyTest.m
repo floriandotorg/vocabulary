@@ -16,7 +16,7 @@
 
 @interface FYDVocabularyTest ()
 
-@property (weak,nonatomic) FYDVocabularyBox *vocabularyBox;
+@property (strong,nonatomic) FYDVocabularyBox *vocabularyBox;
 @property (strong,nonatomic) NSArray *vocabularies;
 @property (strong,nonatomic) NSEnumerator *enumerator;
 @property (strong,nonatomic) FYDVocable *currentVocable;
@@ -44,11 +44,13 @@
 
 - (void)currentWrong
 {
+    NSAssert(self.vocabularyBox != nil, @"currentWrong vocabularyBox == nil");
     [self.vocabularyBox putIntoFirstStage:self.currentVocable];
 }
 
 - (void)currentCorrect
 {
+    NSAssert(self.vocabularyBox != nil, @"currentCorrect vocabularyBox == nil");
     [self.vocabularyBox putIntoNextStage:self.currentVocable];
 }
 
