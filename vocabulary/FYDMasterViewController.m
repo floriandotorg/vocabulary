@@ -111,7 +111,7 @@
 
 - (void)applicationDidBecomeActive:(NSNotification*)notification
 {
-    [self updateActivityView];
+    [self waitForSync];
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
