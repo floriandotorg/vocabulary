@@ -13,7 +13,9 @@
 
 @interface FYDTestViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *cardView;
 @property (weak, nonatomic) IBOutlet UILabel *wordLabel;
+@property (weak, nonatomic) IBOutlet UILabel *exampleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *correctButton;
 @property (weak, nonatomic) IBOutlet UIButton *wrongButton;
 @property (weak, nonatomic) IBOutlet UITapGestureRecognizer *labelGestureRecognizer;
@@ -38,6 +40,7 @@
                                               object:nil];
     
     self.wordLabel.text = self.vocableTest.currentVocable.foreign;
+    self.exampleLabel.text = self.vocableTest.currentVocable.foreign_example;
     self.speechSynthesis.text = self.vocableTest.currentVocable.foreign;
     self.speechSynthesis.voice = ISVoiceUSEnglishFemale;
 }
@@ -74,6 +77,8 @@
     [self setLabelGestureRecognizer:nil];
 
     [self setSpeakerButton:nil];
+    [self setExampleLabel:nil];
+    [self setCardView:nil];
     [super viewDidUnload];
 }
 
@@ -94,6 +99,7 @@
         self.speechSynthesis.voice = ISVoiceUSEnglishFemale;
         
         self.wordLabel.text = self.vocableTest.currentVocable.foreign;
+        self.exampleLabel.text = self.vocableTest.currentVocable.foreign_example;
         self.correctButton.hidden = YES;
         self.wrongButton.hidden = YES;
         self.labelGestureRecognizer.enabled = YES;
@@ -133,7 +139,7 @@
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
-    if (CGRectContainsPoint(self.wordLabel.frame, [touch locationInView:self.view]) && !CGRectContainsPoint(self.speakerButton.frame, [touch locationInView:self.view]) )
+    if (CGRectContainsPoint(self.cardView.frame, [touch locationInView:self.view]) && !CGRectContainsPoint(self.speakerButton.frame, [touch locationInView:self.view]) )
     {
         return YES;
     }
@@ -151,8 +157,9 @@
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDidStopSelector:@selector(wordAnimationDidStop)];
     [UIView setAnimationDuration:0.5];
-    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.wordLabel cache:YES];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.cardView cache:YES];
     self.wordLabel.text = self.vocableTest.currentVocable.native;
+    self.exampleLabel.text = @"";
     [UIView commitAnimations];
 }
 

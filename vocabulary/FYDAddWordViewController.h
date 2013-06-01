@@ -10,7 +10,7 @@
 
 @protocol FYDAddWordControllerDelegate<NSObject>
 
-- (void)addWordNewWordNative:(NSString*)native Foreign:(NSString*)foreign;
+- (void)addWordNewWordNative:(NSString*)native Foreign:(NSString*)foreign Example:(NSString*)example;
 - (void)addWordViewControllerDidFinish;
 
 @end

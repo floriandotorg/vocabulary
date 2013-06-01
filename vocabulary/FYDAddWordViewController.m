@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *nativeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *foreignTextField;
+@property (weak, nonatomic) IBOutlet UITextField *exampleTextField;
 
 @end
 
@@ -49,9 +50,10 @@
 {
     if (![self.nativeTextField.text isEmpty] && ![self.foreignTextField.text isEmpty])
     {
-        [self.delegate addWordNewWordNative:self.nativeTextField.text Foreign:self.foreignTextField.text];
+        [self.delegate addWordNewWordNative:self.nativeTextField.text Foreign:self.foreignTextField.text Example:self.exampleTextField.text];
         self.nativeTextField.text = @"";
         self.foreignTextField.text = @"";
+        self.exampleTextField.text = @"";
     }
 }
 
@@ -71,6 +73,7 @@
 - (void)viewDidUnload {
     [self setNativeTextField:nil];
     [self setForeignTextField:nil];
+    [self setExampleTextField:nil];
     [super viewDidUnload];
 }
 @end

@@ -131,9 +131,9 @@
     [self.tableView reloadData];
 }
 
-- (void)addWordNewWordNative:(NSString *)native Foreign:(NSString *)foreign
+- (void)addWordNewWordNative:(NSString*)native Foreign:(NSString*)foreign Example:(NSString*)example
 {
-    [[self.vocabularyBox stageAt:0] addVocable:[[FYDVocable alloc] initWithNative:native AndForeign:foreign AndStage:[self.vocabularyBox stageAt:0]]];
+    [[self.vocabularyBox stageAt:0]  createVocableWithNative:native AndForeign:foreign AndExample:example];
 }
 
 - (void)addWordViewControllerDidFinish
