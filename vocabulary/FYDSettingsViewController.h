@@ -14,7 +14,7 @@
 
 @end
 
-@interface FYDSettingsViewController : UITableViewController<UIGestureRecognizerDelegate>
+@interface FYDSettingsViewController : UITableViewController<UITableViewDelegate>
 
 @property (weak,nonatomic) id<FYDSettingsViewControllerDelegate> delegate;
 
