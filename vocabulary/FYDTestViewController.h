@@ -23,6 +23,4 @@
 @property (strong,nonatomic) FYDVocabularyTest *vocableTest;
 @property (weak,nonatomic) id<FYDTestViewControllerDelegate> delegate;
 
-- (void)abort;
-
 @end

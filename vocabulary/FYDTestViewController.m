@@ -10,6 +10,7 @@
 
 #import "FYDVocable.h"
 #import "FYDVocabularyTest.h"
+#import "FYDTabBarController.h"
 
 @interface FYDTestViewController ()
 
@@ -35,6 +36,11 @@
     self.speechSynthesis.delegate = self;
     
     [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(waitForSync:)
+                                                name:FYDTabBarControllerWaitForSync
+                                              object:nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(applicationWillResignActiveNotification:)
                                                 name:UIApplicationWillResignActiveNotification
                                               object:nil];
@@ -43,6 +49,11 @@
     self.exampleLabel.text = self.vocableTest.currentVocable.foreign_example;
     self.speechSynthesis.text = self.vocableTest.currentVocable.foreign;
     self.speechSynthesis.voice = ISVoiceUSEnglishFemale;
+}
+
+- (void)waitForSync:(NSNotification*)notification
+{
+    [self abort];
 }
 
 - (void)abort

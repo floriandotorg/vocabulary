@@ -17,7 +17,7 @@
 		1777016A174E51CB006F1DE8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17770169174E51CB006F1DE8 /* Default@2x.png */; };
 		1777016C174E51CB006F1DE8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1777016B174E51CB006F1DE8 /* Default-568h@2x.png */; };
 		1777016F174E51CB006F1DE8 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1777016D174E51CB006F1DE8 /* MainStoryboard_iPhone.storyboard */; };
-		17770175174E51CB006F1DE8 /* FYDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17770174174E51CB006F1DE8 /* FYDMasterViewController.m */; };
+		17770175174E51CB006F1DE8 /* FYDChooseTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17770174174E51CB006F1DE8 /* FYDChooseTestViewController.m */; };
 		17770178174E51CB006F1DE8 /* FYDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17770177174E51CB006F1DE8 /* FYDTestViewController.m */; };
 		17770180174E51CC006F1DE8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1777017F174E51CC006F1DE8 /* SenTestingKit.framework */; };
 		17770181174E51CC006F1DE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17770155174E51CB006F1DE8 /* UIKit.framework */; };
@@ -43,10 +43,16 @@
 		17B2E2081751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E2071751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png */; };
 		17B2E20E17512BC700505428 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E20D17512BC700505428 /* icon_114.png */; };
 		17B2E21017512BCD00505428 /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E20F17512BCD00505428 /* icon_57.png */; };
-		17B2E21317512FFE00505428 /* FYDAddWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B2E21217512FFD00505428 /* FYDAddWordViewController.m */; };
+		17B2E21317512FFE00505428 /* FYDVocableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B2E21217512FFD00505428 /* FYDVocableViewController.m */; };
 		17B2E2161751345700505428 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B2E2151751345700505428 /* NSMutableArray+Shuffle.m */; };
 		17B2E21817513AA800505428 /* trashbin_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E21717513AA800505428 /* trashbin_empty.png */; };
 		17B2E21B17513E5C00505428 /* NSString+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B2E21A17513E5C00505428 /* NSString+Empty.m */; };
+		17EC5FB71774E22A009E37F1 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC5FB61774E22A009E37F1 /* gear.png */; };
+		17EC5FB91774E242009E37F1 /* graduation-cap.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC5FB81774E242009E37F1 /* graduation-cap.png */; };
+		17EC5FBB1774E292009E37F1 /* write.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC5FBA1774E292009E37F1 /* write.png */; };
+		17EC5FBE1774E647009E37F1 /* FYDEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EC5FBD1774E647009E37F1 /* FYDEditViewController.m */; };
+		17EC5FC11774E895009E37F1 /* FYDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EC5FC01774E894009E37F1 /* FYDTabBarController.m */; };
+		17EC5FC41775A27D009E37F1 /* FYDVocableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EC5FC31775A27D009E37F1 /* FYDVocableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +80,8 @@
 		17770169174E51CB006F1DE8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1777016B174E51CB006F1DE8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1777016E174E51CB006F1DE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		17770173174E51CB006F1DE8 /* FYDMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYDMasterViewController.h; sourceTree = "<group>"; };
-		17770174174E51CB006F1DE8 /* FYDMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDMasterViewController.m; sourceTree = "<group>"; };
+		17770173174E51CB006F1DE8 /* FYDChooseTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYDChooseTestViewController.h; sourceTree = "<group>"; };
+		17770174174E51CB006F1DE8 /* FYDChooseTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDChooseTestViewController.m; sourceTree = "<group>"; };
 		17770176174E51CB006F1DE8 /* FYDTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYDTestViewController.h; sourceTree = "<group>"; };
 		17770177174E51CB006F1DE8 /* FYDTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDTestViewController.m; sourceTree = "<group>"; };
 		1777017E174E51CC006F1DE8 /* vocabularyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vocabularyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,13 +122,22 @@
 		17B2E2071751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png"; sourceTree = "<group>"; };
 		17B2E20D17512BC700505428 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_114.png; path = ../icon_114.png; sourceTree = "<group>"; };
 		17B2E20F17512BCD00505428 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_57.png; path = ../icon_57.png; sourceTree = "<group>"; };
-		17B2E21117512FFD00505428 /* FYDAddWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDAddWordViewController.h; sourceTree = "<group>"; };
-		17B2E21217512FFD00505428 /* FYDAddWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDAddWordViewController.m; sourceTree = "<group>"; };
+		17B2E21117512FFD00505428 /* FYDVocableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDVocableViewController.h; sourceTree = "<group>"; };
+		17B2E21217512FFD00505428 /* FYDVocableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDVocableViewController.m; sourceTree = "<group>"; };
 		17B2E2141751345700505428 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
 		17B2E2151751345700505428 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
 		17B2E21717513AA800505428 /* trashbin_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trashbin_empty.png; sourceTree = "<group>"; };
 		17B2E21917513E5C00505428 /* NSString+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Empty.h"; sourceTree = "<group>"; };
 		17B2E21A17513E5C00505428 /* NSString+Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Empty.m"; sourceTree = "<group>"; };
+		17EC5FB61774E22A009E37F1 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		17EC5FB81774E242009E37F1 /* graduation-cap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graduation-cap.png"; sourceTree = "<group>"; };
+		17EC5FBA1774E292009E37F1 /* write.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = write.png; sourceTree = "<group>"; };
+		17EC5FBC1774E647009E37F1 /* FYDEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDEditViewController.h; sourceTree = "<group>"; };
+		17EC5FBD1774E647009E37F1 /* FYDEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDEditViewController.m; sourceTree = "<group>"; };
+		17EC5FBF1774E894009E37F1 /* FYDTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDTabBarController.h; sourceTree = "<group>"; };
+		17EC5FC01774E894009E37F1 /* FYDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDTabBarController.m; sourceTree = "<group>"; };
+		17EC5FC21775A27D009E37F1 /* FYDVocableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDVocableCell.h; sourceTree = "<group>"; };
+		17EC5FC31775A27D009E37F1 /* FYDVocableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDVocableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,14 +273,18 @@
 		177701A3174E802D006F1DE8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				17770173174E51CB006F1DE8 /* FYDMasterViewController.h */,
-				17770174174E51CB006F1DE8 /* FYDMasterViewController.m */,
+				17770173174E51CB006F1DE8 /* FYDChooseTestViewController.h */,
+				17770174174E51CB006F1DE8 /* FYDChooseTestViewController.m */,
 				17770176174E51CB006F1DE8 /* FYDTestViewController.h */,
 				17770177174E51CB006F1DE8 /* FYDTestViewController.m */,
 				178A4B77174F65FA00CFBB3E /* FYDSettingsViewController.h */,
 				178A4B78174F65FA00CFBB3E /* FYDSettingsViewController.m */,
-				17B2E21117512FFD00505428 /* FYDAddWordViewController.h */,
-				17B2E21217512FFD00505428 /* FYDAddWordViewController.m */,
+				17B2E21117512FFD00505428 /* FYDVocableViewController.h */,
+				17B2E21217512FFD00505428 /* FYDVocableViewController.m */,
+				17EC5FBC1774E647009E37F1 /* FYDEditViewController.h */,
+				17EC5FBD1774E647009E37F1 /* FYDEditViewController.m */,
+				17EC5FBF1774E894009E37F1 /* FYDTabBarController.h */,
+				17EC5FC01774E894009E37F1 /* FYDTabBarController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -275,6 +294,8 @@
 			children = (
 				17770196174E5907006F1DE8 /* FYDStageCell.h */,
 				17770197174E5907006F1DE8 /* FYDStageCell.m */,
+				17EC5FC21775A27D009E37F1 /* FYDVocableCell.h */,
+				17EC5FC31775A27D009E37F1 /* FYDVocableCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -284,6 +305,9 @@
 			children = (
 				17B2E21717513AA800505428 /* trashbin_empty.png */,
 				17B2E20F17512BCD00505428 /* icon_57.png */,
+				17EC5FB61774E22A009E37F1 /* gear.png */,
+				17EC5FBA1774E292009E37F1 /* write.png */,
+				17EC5FB81774E242009E37F1 /* graduation-cap.png */,
 				17B2E20D17512BC700505428 /* icon_114.png */,
 				17770167174E51CB006F1DE8 /* Default.png */,
 				17770169174E51CB006F1DE8 /* Default@2x.png */,
@@ -396,6 +420,9 @@
 				17B2E20E17512BC700505428 /* icon_114.png in Resources */,
 				17B2E21017512BCD00505428 /* icon_57.png in Resources */,
 				17B2E21817513AA800505428 /* trashbin_empty.png in Resources */,
+				17EC5FB71774E22A009E37F1 /* gear.png in Resources */,
+				17EC5FB91774E242009E37F1 /* graduation-cap.png in Resources */,
+				17EC5FBB1774E292009E37F1 /* write.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +459,7 @@
 			files = (
 				17770162174E51CB006F1DE8 /* main.m in Sources */,
 				17770166174E51CB006F1DE8 /* FYDAppDelegate.m in Sources */,
-				17770175174E51CB006F1DE8 /* FYDMasterViewController.m in Sources */,
+				17770175174E51CB006F1DE8 /* FYDChooseTestViewController.m in Sources */,
 				17770178174E51CB006F1DE8 /* FYDTestViewController.m in Sources */,
 				17770198174E5907006F1DE8 /* FYDStageCell.m in Sources */,
 				1777019B174E5AA0006F1DE8 /* FYDStage.m in Sources */,
@@ -440,10 +467,13 @@
 				177701A1174E761A006F1DE8 /* FYDVocabularyTest.m in Sources */,
 				177701A6174E931F006F1DE8 /* FYDVocabularyBox.m in Sources */,
 				178A4B79174F65FA00CFBB3E /* FYDSettingsViewController.m in Sources */,
-				17B2E21317512FFE00505428 /* FYDAddWordViewController.m in Sources */,
+				17B2E21317512FFE00505428 /* FYDVocableViewController.m in Sources */,
 				17B2E2161751345700505428 /* NSMutableArray+Shuffle.m in Sources */,
 				17B2E21B17513E5C00505428 /* NSString+Empty.m in Sources */,
 				17885BD4175A2A5E000B14C3 /* DejalActivityView.m in Sources */,
+				17EC5FBE1774E647009E37F1 /* FYDEditViewController.m in Sources */,
+				17EC5FC11774E895009E37F1 /* FYDTabBarController.m in Sources */,
+				17EC5FC41775A27D009E37F1 /* FYDVocableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

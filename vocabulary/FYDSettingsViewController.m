@@ -10,6 +10,8 @@
 
 #import <Dropbox/Dropbox.h>
 
+#import "FYDTabBarController.h"
+
 @interface FYDSettingsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *dropboxCell;
@@ -37,6 +39,11 @@
     }
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [(FYDTabBarController*)self.tabBarController loadVocabularyBox];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -50,13 +57,7 @@
     return [NSString stringWithFormat:@"Version: %@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
 }
 
-#pragma mark - Actions
-
-- (IBAction)doneButtonClick:(UIBarButtonItem *)sender
-{
-    [self.delegate settingsViewControllerDidFinish];
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+#pragma mark - Table View Data Source
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

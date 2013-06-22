@@ -8,14 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol FYDSettingsViewControllerDelegate<NSObject>
-
-- (void)settingsViewControllerDidFinish;
-
-@end
-
 @interface FYDSettingsViewController : UITableViewController<UITableViewDelegate>
-
-@property (weak,nonatomic) id<FYDSettingsViewControllerDelegate> delegate;
 
 @end
