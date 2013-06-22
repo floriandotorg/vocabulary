@@ -8,25 +8,116 @@
 
 #import "vocabularyTests.h"
 
+#import "FYDVocabularyBox.h"
+#import "FYDStage.h"
+
+@interface vocabularyTests ()
+
+@property (strong, nonatomic) FYDVocabularyBox *vocabularyBox;
+
+@end
+
 @implementation vocabularyTests
 
 - (void)setUp
 {
     [super setUp];
     
-    // Set-up code here.
+    self.vocabularyBox = [[FYDVocabularyBox alloc] init];
+    [self.vocabularyBox addStage];
+    [self.vocabularyBox addStage];
+    [self.vocabularyBox addStage];
 }
 
 - (void)tearDown
 {
-    // Tear-down code here.
+    self.vocabularyBox = nil;
     
     [super tearDown];
 }
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in vocabularyTests");
+    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
+    
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    
+    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
+    
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    
+    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:1], @"self.box.recommandedStage == [self.box stageAt:1]");
+    
+    [[self.vocabularyBox stageAt:1] incTestCount];
+    
+    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
+    
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    
+    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:1], @"self.box.recommandedStage == [self.box stageAt:1]");
+    
+    [[self.vocabularyBox stageAt:1] incTestCount];
+    
+    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
+    
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    
+    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:1], @"self.box.recommandedStage == [self.box stageAt:1]");
+    
+    [[self.vocabularyBox stageAt:1] incTestCount];
+    
+    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:2], @"self.box.recommandedStage == [self.box stageAt:2]");
+    
+    [[self.vocabularyBox stageAt:2] incTestCount];
+    
+    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
+    
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:1] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:1] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:1] incTestCount];
+    
+    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:2], @"self.box.recommandedStage == [self.box stageAt:2]");
+    
+    [[self.vocabularyBox stageAt:2] incTestCount];
+    
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:1] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:1] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:1] incTestCount];
+    
+    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:2], @"self.box.recommandedStage == [self.box stageAt:2]");
+    
+    [[self.vocabularyBox stageAt:2] incTestCount];
+    
+    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
+    
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    [[self.vocabularyBox stageAt:0] incTestCount];
+    
+    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:1], @"self.box.recommandedStage == [self.box stageAt:1]");
 }
 
 @end

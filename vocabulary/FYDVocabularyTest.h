@@ -10,6 +10,7 @@
 
 @class FYDVocable;
 @class FYDVocabularyBox;
+@class FYDStage;
 
 @interface FYDVocabularyTest : NSObject
 
@@ -21,6 +22,8 @@
 - (void)currentCorrect;
 
 - (void)deleteCurrent;
+
+- (FYDStage*)stage;
 
 @property (readonly) FYDVocable *currentVocable;
 

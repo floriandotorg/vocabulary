@@ -9,7 +9,9 @@
 #import "FYDTestViewController.h"
 
 #import "FYDVocable.h"
+#import "FYDStage.h"
 #import "FYDVocabularyTest.h"
+
 #import "FYDTabBarController.h"
 
 @interface FYDTestViewController ()
@@ -63,7 +65,10 @@
 
 - (void)endTest:(BOOL)animated
 {
+    [self.vocableTest.stage incTestCount];
+    
     [self.delegate testViewControllerDidFinish];
+    
     [self dismissViewControllerAnimated:animated completion:nil];
 }
 

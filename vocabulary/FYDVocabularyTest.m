@@ -59,4 +59,9 @@
     [self.currentVocable.stage removeVocable:self.currentVocable];
 }
 
+- (FYDStage*)stage
+{
+    return [self.vocabularies[0] stage];
+}
+
 @end
