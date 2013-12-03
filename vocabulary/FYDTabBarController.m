@@ -34,6 +34,8 @@ NSString *const FYDTabBarControllerWaitForSync = @"FYDTabBarControllerWaitForSyn
 
 - (void)viewDidLoad
 {
+    srand48(time(0));
+    
     [self updateDropbox];
     
     self.selectedIndex = 1;

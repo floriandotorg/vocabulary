@@ -46,11 +46,47 @@
                                             selector:@selector(applicationWillResignActiveNotification:)
                                                 name:UIApplicationWillResignActiveNotification
                                               object:nil];
+
+    [self showForeignNative];
     
-    self.wordLabel.text = self.vocableTest.currentVocable.foreign;
-    self.exampleLabel.text = self.vocableTest.currentVocable.foreign_example;
     self.speechSynthesis.text = self.vocableTest.currentVocable.foreign;
     self.speechSynthesis.voice = ISVoiceUSEnglishFemale;
+}
+
+- (void)showForeign
+{
+    self.wordLabel.text = self.vocableTest.currentVocable.foreign;
+    self.exampleLabel.text = self.vocableTest.currentVocable.foreign_example;
+}
+
+- (void)showNative
+{
+    self.wordLabel.text = self.vocableTest.currentVocable.native;
+    self.exampleLabel.text = @"";
+}
+
+- (void)showForeignNative
+{
+    if (drand48() > 0.5)
+    {
+        [self showForeign];
+    }
+    else
+    {
+        [self showNative];
+    }
+}
+
+- (void)toggelForeignNative
+{
+    if ([self.wordLabel.text isEqualToString:self.vocableTest.currentVocable.native])
+    {
+        [self showForeign];
+    }
+    else
+    {
+        [self showNative];
+    }
 }
 
 - (void)waitForSync:(NSNotification*)notification
@@ -114,8 +150,8 @@
         self.speechSynthesis.text = self.vocableTest.currentVocable.foreign;
         self.speechSynthesis.voice = ISVoiceUSEnglishFemale;
         
-        self.wordLabel.text = self.vocableTest.currentVocable.foreign;
-        self.exampleLabel.text = self.vocableTest.currentVocable.foreign_example;
+        [self showForeignNative];
+        
         self.correctButton.hidden = YES;
         self.wrongButton.hidden = YES;
         self.labelGestureRecognizer.enabled = YES;
@@ -174,8 +210,7 @@
     [UIView setAnimationDidStopSelector:@selector(wordAnimationDidStop)];
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.cardView cache:YES];
-    self.wordLabel.text = self.vocableTest.currentVocable.native;
-    self.exampleLabel.text = @"";
+    [self toggelForeignNative];
     [UIView commitAnimations];
 }
 
