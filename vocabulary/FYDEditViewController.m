@@ -187,6 +187,7 @@
 - (void)vocableViewController:(FYDVocableViewController *)viewController addVocableNative:(NSString *)native Foreign:(NSString *)foreign Example:(NSString *)example
 {
     [[self.vocabularyBox stageAt:0]  createVocableWithNative:native AndForeign:foreign AndExample:example];
+    [(FYDTabBarController*)self.tabBarController saveVocabularyBox];
 }
 
 - (void)vocableViewController:(FYDVocableViewController *)viewController removeVocable:(FYDVocable *)vocable
