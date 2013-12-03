@@ -39,6 +39,8 @@ extern NSString *const iSpeechErrorDomain;
  * Possible error codes returned by the SDK.
  * 
  * Some of these should not be returned by the SDK (ones like `kISpeechErrorCodeInvalidFileFormat` and `kISpeechErrorCodeInvalidContentType`) because you don't have control over them. However, they are included in the off chance that something does go wrong with the server and they are returned. Codes that shouldn't be returned are marked with an asterisk (`*`).
+ *
+ * When you get an error during speech recognition, tell the user that something went wrong. If you get `kISpeechErrorCodeNoInputAvailable`, `kISpeechErrorCodeNoInternetConnection`, or `kISpeechErrorCodeLostInput` the error messages on those NSError instances have been localized, and are presentable to the user. 
  */
 enum _ISpeechErrorCode {
 	kISpeechErrorCodeInvalidAPIKey = 1,					// You provided an invalid API key.
@@ -68,13 +70,15 @@ enum _ISpeechErrorCode {
 	kISpeechErrorCodeInvalidRequestMethod = 1000,		// *
 	
 	// Error code 300 was "UserCancelled", but that has been wrapped into the SDK and is no longer used.
-	kISpeechErrorCodeNoInputAvailable = 301,			// You wanted to do speech synthesis, but there's no mic available.
+	kISpeechErrorCodeNoInputAvailable = 301,			// You wanted to do speech recognition, but there's no mic available.
 	kISpeechErrorCodeNoInternetConnection = 302,		// There's no connection to the cloud to do speech synthesis or speech recognition.
 	kISpeechErrorCodeSDKIsBusy = 303,					// The SDK is busy doing either recognition or synthesis.
 	kISpeechErrorCodeSDKInterrupted = 304,				// The SDK was in the middle of doing something, and then got an audio session interruption
 	kISpeechErrorCodeCouldNotActiveAudioSession = 305,	// Unable to activate the audio session. Can happen when another audio session has higher precedence than ours does.
 	kISpeechErrorCodeCouldNotStartAudioQueue = 306,		// Unable to start an audio queue. Can happen when another audio queue has higher precedence than ours does.
 	kISpeechErrorCodeServerDied = 307,					// Server Died error. mediaserverd has died, and we need to clear out all our audio objects and start fresh.
+	kISpeechErrorCodeLostInput = 308,					// There was audio input, and speech recognition was happening, and then the audio input went away for some reason.
+	kISpeechErrorCodeBadHost = 309,						// The SSL Certificate chain was invalid, probably a result of some redirect away from iSpeech's servers. An example of this happening is when connected to a WiFi network that requires authentication before sending network requests.
 	
 	kISpeechErrorCodeUnknownError = 399
 };
@@ -172,15 +176,13 @@ typedef NSUInteger iSpeechErrorCode;
  */
 @property (nonatomic, copy, readonly) NSString *version;
 
-/** @name Getting the SDK Instance */
-
 /**
- * The single instance of the iSpeechSDK class.
- * 
- * @return Returns the shared instance of the SDK.
+ * Set this property to NO if you plan on only using TTS. This should supress the microphone permission. Defaults to YES.
  */
-+ (iSpeechSDK *)sharedSDK;
 
+
+
++ (iSpeechSDK *)sharedSDK;
 /** @name Getting the Configuration Instance */
 
 /**
@@ -188,6 +190,9 @@ typedef NSUInteger iSpeechErrorCode;
  *
  * @return Returns the configuration proxy.
  */
+
+/** @name Setting up the Audio Session */
+
 - (id <ISConfiguration>)configuration;
 
 /** @name Resetting the SDK */

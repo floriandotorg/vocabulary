@@ -10,6 +10,18 @@
 #import "iSpeechSDK.h"
 #import "ISSpeechSynthesisVoices.h"
 
+#if NS_BLOCKS_AVAILABLE
+
+/*^*
+ * The callback handler for a speech synthesis request.
+ *
+ * @param error An error for the request, if one occurred, otherwise, `nil`.
+ * @param userCancelled Whether speech synthesis finished as a result of user cancellation or not.
+ */
+typedef void(^ISSpeechSynthesisHandler)(NSError *error, BOOL userCancelled);
+
+#endif
+
 @class ISSpeechSynthesis;
 
 /**
@@ -110,6 +122,17 @@
  * @return Whether synthesis successfully started. If this returns `NO`, check the error for details on what went wrong.
  */
 - (BOOL)speak:(NSError **)err;
+
+#if NS_BLOCKS_AVAILABLE
+
+/**
+ * Speak the text that was specified when creating this instance.
+ *
+ * @param handler A `ISSpeechSynthesisHandler` block to be executed when speaking finishes, or when an error occurs. This handler will be called on the main thread.
+ */
+- (void)speakWithHandler:(ISSpeechSynthesisHandler)handler;
+
+#endif
 
 /**
  * Cancels an in-progress speech synthesis action.

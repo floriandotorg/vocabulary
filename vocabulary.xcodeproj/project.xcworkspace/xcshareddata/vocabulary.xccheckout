@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AE05D7C4-2CA8-4ABE-A366-19879A5EDE50</string>
+	<key>IDESourceControlProjectName</key>
+	<string>vocabulary</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>87ABF82D-933F-4D64-995C-172B1A6A795C</key>
+		<string>https://github.com/floyd-bremen/vocabulary.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>vocabulary.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>87ABF82D-933F-4D64-995C-172B1A6A795C</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/floyd-bremen/vocabulary.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>87ABF82D-933F-4D64-995C-172B1A6A795C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>87ABF82D-933F-4D64-995C-172B1A6A795C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>vocabulary</string>
+		</dict>
+	</array>
+</dict>
+</plist>

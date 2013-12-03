@@ -28,6 +28,19 @@ enum {
 
 typedef NSUInteger ISFreeFormType;
 
+#if NS_BLOCKS_AVAILABLE
+
+/*^*
+ * The callback handler for speech recognition request.
+ *
+ * @param error An error, if one occured, or `nil`.
+ * @param result The result of a successful recognition, or `nil` if there's an error.
+ * @param cancelledByUser Whether speech recognition finished because a user cancelled the request.
+ */
+typedef void(^ISSpeechRecognitionHandler)(NSError *error, ISSpeechRecognitionResult *result, BOOL cancelledByUser);
+
+#endif
+
 @class ISSpeechRecognition;
 
 /**
@@ -172,7 +185,7 @@ typedef NSUInteger ISFreeFormType;
 /**
  * Start an untimed listen.
  * 
- * An untimed listen means that the SDK will start listening, and will not stop unless you tell it to by calling -[ISSpeechRecognition finishListenAndStartRecognize].
+ * An untimed listen means that the SDK will start listening, and will not stop unless you tell it to by calling -[ISSpeechRecognition finishListenAndStartRecognize], or until silence detection kicks in, if you have that enabled.
  * 
  * If you're using a command or alias list, use `-listenAndRecognizeWithTimeout:error:` instead. This will ensure that speech recognition will only last as long as is necessary, thus saving the user's battery life and data plan, ensuring that you get a result back, and providing an better overall experience.
  * 
@@ -198,6 +211,33 @@ typedef NSUInteger ISFreeFormType;
  * @return Returns whatever speech synthesis successfully started. If this returns `NO`, check the error for details on what went wrong.
  */
 - (BOOL)listenAndRecognizeWithTimeout:(NSTimeInterval)timeout error:(NSError **)err;
+
+#if NS_BLOCKS_AVAILABLE
+
+/**
+ * Start an untimed listen.
+ *
+ * An untimed listen means that the SDK will start listening, and will not stop unless you tell it to by calling -[ISSpeechRecognition finishListenAndStartRecognize], or until silence detection kicks in, if you have that enabled.
+ *
+ * If you're using a command or alias list, use `-listenAndRecognizeWithTimeout:handler:` instead. This will ensure that speech recognition will only last as long as is necessary, thus saving the user's battery life and data plan, ensuring that you get a result back, and providing an better overall experience.
+ *
+ * @param handler An `ISSpeechRecognitionHandler` block that will be executed on the main thread when speech recognition completes, or when an error occurs.
+ * @see listenAndRecognizeWithTimeout:handler:
+ * @see finishListenAndStartRecognize
+ */
+- (void)listenWithHandler:(ISSpeechRecognitionHandler)handler;
+
+/**
+ * Starts a timed listen. After a set timeout, the SDK will stop listening for audio and will start to transcribe it.
+ *
+ * Useful when using command lists to ensure that the user doesn't talk longer than necessary.
+ *
+ * @param timeout The amount of time, in seconds, for the timed listen to last for.
+ * @param handler An `ISSpeechRecognitionHandler` block that will be executed on the main thread when speech recognition completes, or when an error occurs.
+ */
+- (void)listenAndRecognizeWithTimeout:(NSTimeInterval)timeout handler:(ISSpeechRecognitionHandler)handler;
+
+#endif
 
 /**
  * Cancels an in progress speech recognition action.

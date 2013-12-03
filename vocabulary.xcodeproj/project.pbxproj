@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1762D2B5184E52B4001DC5F2 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1762D2B4184E52B4001DC5F2 /* Dropbox.framework */; };
+		1762D2B7184E52E8001DC5F2 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1762D2B6184E52E8001DC5F2 /* libc++.dylib */; };
 		17770156174E51CB006F1DE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17770155174E51CB006F1DE8 /* UIKit.framework */; };
 		17770158174E51CB006F1DE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17770157174E51CB006F1DE8 /* Foundation.framework */; };
 		1777015A174E51CB006F1DE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17770159174E51CB006F1DE8 /* CoreGraphics.framework */; };
@@ -30,7 +32,6 @@
 		177701A1174E761A006F1DE8 /* FYDVocabularyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 177701A0174E761A006F1DE8 /* FYDVocabularyTest.m */; };
 		177701A6174E931F006F1DE8 /* FYDVocabularyBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 177701A5174E931F006F1DE8 /* FYDVocabularyBox.m */; };
 		17885BD4175A2A5E000B14C3 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17885BD3175A2A5E000B14C3 /* DejalActivityView.m */; };
-		178A4B6B174EC68800CFBB3E /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B6A174EC68800CFBB3E /* Dropbox.framework */; };
 		178A4B6D174EC6AD00CFBB3E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B6C174EC6AD00CFBB3E /* CFNetwork.framework */; };
 		178A4B6F174EC6B500CFBB3E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B6E174EC6B500CFBB3E /* Security.framework */; };
 		178A4B71174EC6BC00CFBB3E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B70174EC6BC00CFBB3E /* SystemConfiguration.framework */; };
@@ -66,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1762D2B4184E52B4001DC5F2 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
+		1762D2B6184E52E8001DC5F2 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		17770152174E51CB006F1DE8 /* vocabulary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vocabulary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17770155174E51CB006F1DE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		17770157174E51CB006F1DE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,7 +105,6 @@
 		177701A5174E931F006F1DE8 /* FYDVocabularyBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDVocabularyBox.m; sourceTree = "<group>"; };
 		17885BD2175A2A5E000B14C3 /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
 		17885BD3175A2A5E000B14C3 /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
-		178A4B6A174EC68800CFBB3E /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
 		178A4B6C174EC6AD00CFBB3E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		178A4B6E174EC6B500CFBB3E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		178A4B70174EC6BC00CFBB3E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -145,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1762D2B7184E52E8001DC5F2 /* libc++.dylib in Frameworks */,
 				178A4B6D174EC6AD00CFBB3E /* CFNetwork.framework in Frameworks */,
 				178A4B6F174EC6B500CFBB3E /* Security.framework in Frameworks */,
 				178A4B71174EC6BC00CFBB3E /* SystemConfiguration.framework in Frameworks */,
@@ -152,8 +155,8 @@
 				178A4B73174EC6C500CFBB3E /* QuartzCore.framework in Frameworks */,
 				17770156174E51CB006F1DE8 /* UIKit.framework in Frameworks */,
 				17770158174E51CB006F1DE8 /* Foundation.framework in Frameworks */,
+				1762D2B5184E52B4001DC5F2 /* Dropbox.framework in Frameworks */,
 				1777015A174E51CB006F1DE8 /* CoreGraphics.framework in Frameworks */,
-				178A4B6B174EC68800CFBB3E /* Dropbox.framework in Frameworks */,
 				17B2E1FB1751229E00505428 /* libiSpeechSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,13 +196,14 @@
 		17770154174E51CB006F1DE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1762D2B6184E52E8001DC5F2 /* libc++.dylib */,
+				1762D2B4184E52B4001DC5F2 /* Dropbox.framework */,
 				17B2E2051751230E00505428 /* AudioToolbox.framework */,
 				17B2E1FA1751229E00505428 /* libiSpeechSDK.a */,
 				178A4B72174EC6C500CFBB3E /* QuartzCore.framework */,
 				178A4B70174EC6BC00CFBB3E /* SystemConfiguration.framework */,
 				178A4B6E174EC6B500CFBB3E /* Security.framework */,
 				178A4B6C174EC6AD00CFBB3E /* CFNetwork.framework */,
-				178A4B6A174EC68800CFBB3E /* Dropbox.framework */,
 				17770155174E51CB006F1DE8 /* UIKit.framework */,
 				17770157174E51CB006F1DE8 /* Foundation.framework */,
 				17770159174E51CB006F1DE8 /* CoreGraphics.framework */,
@@ -588,7 +592,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					/Users/florian/GitHub/vocabulary,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vocabulary/vocabulary-Prefix.pch";
@@ -609,7 +614,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					/Users/florian/GitHub/vocabulary,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vocabulary/vocabulary-Prefix.pch";

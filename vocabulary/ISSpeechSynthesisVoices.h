@@ -50,3 +50,4 @@ extern NSString *const ISVoiceRURussianMale;
 extern NSString *const ISVoiceSWSwedishFemale;
 extern NSString *const ISVoiceCAFrenchFemale;
 extern NSString *const ISVoiceCAFrenchMale;
+extern NSString *const ISVoiceArabicMale;

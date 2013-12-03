@@ -17,6 +17,7 @@ NSString *const FYDTabBarControllerWaitForSync = @"FYDTabBarControllerWaitForSyn
 @interface FYDTabBarController ()
 
 @property (strong, nonatomic) DBFile *file;
+@property (strong, nonatomic) UIAlertView *alertView;
 
 @end
 
@@ -60,7 +61,7 @@ NSString *const FYDTabBarControllerWaitForSync = @"FYDTabBarControllerWaitForSyn
 {
     [self updateDropbox];
     
-    if ([[DBFilesystem sharedFilesystem] status] != DBSyncStatusOnline)
+    if ([[DBFilesystem sharedFilesystem] status] != DBSyncStatusActive)
     {
         if ([DejalBezelActivityView currentActivityView] == nil)
         {
@@ -84,13 +85,28 @@ NSString *const FYDTabBarControllerWaitForSync = @"FYDTabBarControllerWaitForSyn
 
 - (void)waitForSync
 {
-    if ([self updateActivityView] && [self.file update:nil])
+    if ([DBAccountManager sharedManager].linkedAccount == nil)
     {
-        [self loadVocabularyBox];
+        if (self.alertView == nil || !self.alertView.visible)
+        {
+            self.alertView = [[UIAlertView alloc] initWithTitle:@"Dropbox"
+                                                            message:@"You need to link your Dropbox account to use this app."
+                                                           delegate:self
+                                                  cancelButtonTitle:nil
+                                                  otherButtonTitles:@"Goto Settings",nil];
+            [self.alertView show];
+        }
     }
     else
     {
-        [self performSelector:@selector(waitForSync) withObject:self afterDelay:0.5];
+        if ([self updateActivityView] && [self.file update:nil])
+        {
+            [self loadVocabularyBox];
+        }
+        else
+        {
+            [self performSelector:@selector(waitForSync) withObject:self afterDelay:0.5];
+        }
     }
 }
 
@@ -104,39 +120,27 @@ NSString *const FYDTabBarControllerWaitForSync = @"FYDTabBarControllerWaitForSyn
 - (void)updateDropbox
 {
     DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
-    
-    if (account == nil)
+
+    if ([DBFilesystem sharedFilesystem] == nil)
     {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Dropbox"
-                                                        message:@"You need to link your Dropbox account to use this app."
-                                                       delegate:self
-                                              cancelButtonTitle:nil
-                                              otherButtonTitles:@"Goto Settings",nil];
-        [alert show];
+        DBFilesystem *filesystem = [[DBFilesystem alloc] initWithAccount:account];
+        [DBFilesystem setSharedFilesystem:filesystem];
     }
-    else
+    
+    if (self.file == nil)
     {
-        if ([DBFilesystem sharedFilesystem] == nil)
-        {
-            DBFilesystem *filesystem = [[DBFilesystem alloc] initWithAccount:account];
-            [DBFilesystem setSharedFilesystem:filesystem];
-        }
+        self.file = [[DBFilesystem sharedFilesystem] openFile:self.vocabularyBoxPath error:nil];
         
         if (self.file == nil)
         {
-            self.file = [[DBFilesystem sharedFilesystem] openFile:self.vocabularyBoxPath error:nil];
-            
-            if (self.file == nil)
-            {
-                self.file = [[DBFilesystem sharedFilesystem] createFile:self.vocabularyBoxPath error:nil];
-            }
-            
-            __block FYDTabBarController *block_self = self;
-            [self.file addObserver:self block:^
-             {
-                 [block_self waitForSync];
-             }];
+            self.file = [[DBFilesystem sharedFilesystem] createFile:self.vocabularyBoxPath error:nil];
         }
+        
+        __block FYDTabBarController *block_self = self;
+        [self.file addObserver:self block:^
+         {
+             [block_self waitForSync];
+         }];
     }
 }
 

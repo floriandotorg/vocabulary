@@ -90,34 +90,34 @@
         <scene sceneID="18">
             <objects>
                 <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="FYDChooseTestViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="87" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="89" id="lJ0-d7-vTF" customClass="FYDStageCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="89"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="87" id="lJ0-d7-vTF" customClass="FYDStageCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="87"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stage 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Poa-Zm-POM">
-                                            <rect key="frame" x="109" y="15" width="103" height="29"/>
+                                            <rect key="frame" x="109" y="14" width="103" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="100 Words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="57d-0h-Z9y">
-                                            <rect key="frame" x="99" y="52" width="123" height="21"/>
+                                            <rect key="frame" x="99" y="51" width="123" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Recommanded" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kKX-6W-IQ5">
-                                            <rect key="frame" x="220" y="33" width="93" height="21"/>
+                                            <rect key="frame" x="220" y="32" width="93" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -509,6 +509,59 @@
         <image name="verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png" width="530" height="530"/>
         <image name="write.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="FYDChooseTestViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FYDChooseTestViewController.h"/>
+        </class>
+        <class className="FYDEditViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FYDEditViewController.h"/>
+        </class>
+        <class className="FYDSettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FYDSettingsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dropboxCell" candidateClass="UITableViewCell"/>
+            </relationships>
+        </class>
+        <class className="FYDStageCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FYDStageCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="recommandedLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="stageTitelLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="stageWordsLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FYDTabBarController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FYDTabBarController.h"/>
+        </class>
+        <class className="FYDTestViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FYDTestViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="cardView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="correctButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="exampleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelGestureRecognizer" candidateClass="UITapGestureRecognizer"/>
+                <relationship kind="outlet" name="speakerButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="wordLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wrongButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="FYDVocableCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FYDVocableCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="exampleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="foreignLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nativeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FYDVocableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FYDVocableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="exampleTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="foreignTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nativeTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
