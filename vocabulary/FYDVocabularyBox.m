@@ -37,15 +37,15 @@
 
 - (FYDStage*)recommandedStage
 {
-    for (NSInteger n = self.stageCount - 1; n > 0; --n)
+    for (NSInteger n = 0; n < self.stageCount; ++n)
     {
-        if ([self stageAt:n - 1].testCount >= 3)
+        if ([self stageAt:n].testCount < 3)
         {
             return self.stages[n];
         }
     }
     
-    return self.stages[0];
+    return self.stages[self.stageCount - 1];
 }
 
 - (FYDStage*)addStage

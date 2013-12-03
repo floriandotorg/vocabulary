@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *stageTitelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *stageWordsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *recommandedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *countLabel;
 
 @end
 
@@ -47,6 +48,8 @@
     {
         self.recommandedLabel.hidden = YES;
     }
+    
+    self.countLabel.text = [NSString stringWithFormat:@"%i", stage.testCount];
     
     if (stage.vocabularyCount < 1)
     {

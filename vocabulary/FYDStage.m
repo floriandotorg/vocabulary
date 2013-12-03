@@ -69,6 +69,7 @@
     self.testCount += 1;
     if (self.no > 1)
     {
+        [self.vocabularyBox stageAt:0].testCount = 0;
         [self.vocabularyBox stageAt:self.no - 2].testCount = 0;
     }
 }
