@@ -48,21 +48,24 @@
                                               object:nil];
 
     [self showForeignNative];
-    
-    self.speechSynthesis.text = self.vocableTest.currentVocable.foreign;
-    self.speechSynthesis.voice = ISVoiceUSEnglishFemale;
 }
 
 - (void)showForeign
 {
     self.wordLabel.text = self.vocableTest.currentVocable.foreign;
     self.exampleLabel.text = self.vocableTest.currentVocable.foreign_example;
+    
+    self.speechSynthesis.text = self.vocableTest.currentVocable.foreign;
+    self.speechSynthesis.voice = ISVoiceUSEnglishFemale;
 }
 
 - (void)showNative
 {
     self.wordLabel.text = self.vocableTest.currentVocable.native;
     self.exampleLabel.text = @"";
+    
+    self.speechSynthesis.text = self.vocableTest.currentVocable.native;
+    self.speechSynthesis.voice = ISVoiceEURGermanFemale;
 }
 
 - (void)showForeignNative
@@ -147,9 +150,6 @@
     }
     else
     {
-        self.speechSynthesis.text = self.vocableTest.currentVocable.foreign;
-        self.speechSynthesis.voice = ISVoiceUSEnglishFemale;
-        
         [self showForeignNative];
         
         self.correctButton.hidden = YES;
@@ -182,9 +182,6 @@
 
 - (void)wordAnimationDidStop
 {
-    self.speechSynthesis.text = self.vocableTest.currentVocable.native;
-    self.speechSynthesis.voice = ISVoiceEURGermanFemale;
-    
     self.correctButton.hidden = NO;
     self.wrongButton.hidden = NO;
 }
