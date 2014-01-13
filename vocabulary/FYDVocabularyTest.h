@@ -14,7 +14,7 @@
 
 @interface FYDVocabularyTest : NSObject
 
-- (id)initWithVocabularies:(NSArray*)stage AndVocabularyBox:(FYDVocabularyBox*)box;
+- (id)initWithVocabularies:(NSArray*)stage AndVocabularyBox:(FYDVocabularyBox*)box andPractice:(BOOL)practice;
 
 - (BOOL)nextVocable;
 
@@ -25,6 +25,7 @@
 
 - (FYDStage*)stage;
 
-@property (readonly) FYDVocable *currentVocable;
+@property (nonatomic, readonly) FYDVocable *currentVocable;
+@property (nonatomic, readonly) BOOL practice;
 
 @end

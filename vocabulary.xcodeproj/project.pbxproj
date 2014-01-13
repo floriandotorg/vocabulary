@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1709583F1883144100787BA3 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 1709583E1883144100787BA3 /* pencil.png */; };
+		170958421883175F00787BA3 /* PracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 170958411883175F00787BA3 /* PracticeViewController.m */; };
 		1762D2B5184E52B4001DC5F2 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1762D2B4184E52B4001DC5F2 /* Dropbox.framework */; };
 		1762D2B7184E52E8001DC5F2 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1762D2B6184E52E8001DC5F2 /* libc++.dylib */; };
 		17770156174E51CB006F1DE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17770155174E51CB006F1DE8 /* UIKit.framework */; };
@@ -67,6 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1709583E1883144100787BA3 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
+		170958401883175F00787BA3 /* PracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeViewController.h; sourceTree = "<group>"; };
+		170958411883175F00787BA3 /* PracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeViewController.m; sourceTree = "<group>"; };
 		1762D2B4184E52B4001DC5F2 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
 		1762D2B6184E52E8001DC5F2 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		17770152174E51CB006F1DE8 /* vocabulary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vocabulary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +294,8 @@
 				17EC5FBD1774E647009E37F1 /* FYDEditViewController.m */,
 				17EC5FBF1774E894009E37F1 /* FYDTabBarController.h */,
 				17EC5FC01774E894009E37F1 /* FYDTabBarController.m */,
+				170958401883175F00787BA3 /* PracticeViewController.h */,
+				170958411883175F00787BA3 /* PracticeViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -310,6 +317,7 @@
 				17B2E21717513AA800505428 /* trashbin_empty.png */,
 				17B2E20F17512BCD00505428 /* icon_57.png */,
 				17EC5FB61774E22A009E37F1 /* gear.png */,
+				1709583E1883144100787BA3 /* pencil.png */,
 				17EC5FBA1774E292009E37F1 /* write.png */,
 				17EC5FB81774E242009E37F1 /* graduation-cap.png */,
 				17B2E20D17512BC700505428 /* icon_114.png */,
@@ -413,6 +421,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1709583F1883144100787BA3 /* pencil.png in Resources */,
 				17770160174E51CB006F1DE8 /* InfoPlist.strings in Resources */,
 				17770168174E51CB006F1DE8 /* Default.png in Resources */,
 				1777016A174E51CB006F1DE8 /* Default@2x.png in Resources */,
@@ -472,6 +481,7 @@
 				177701A6174E931F006F1DE8 /* FYDVocabularyBox.m in Sources */,
 				178A4B79174F65FA00CFBB3E /* FYDSettingsViewController.m in Sources */,
 				17B2E21317512FFE00505428 /* FYDVocableViewController.m in Sources */,
+				170958421883175F00787BA3 /* PracticeViewController.m in Sources */,
 				17B2E2161751345700505428 /* NSMutableArray+Shuffle.m in Sources */,
 				17B2E21B17513E5C00505428 /* NSString+Empty.m in Sources */,
 				17885BD4175A2A5E000B14C3 /* DejalActivityView.m in Sources */,
@@ -598,7 +608,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vocabulary/vocabulary-Prefix.pch";
 				INFOPLIST_FILE = "vocabulary/vocabulary-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -620,7 +630,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vocabulary/vocabulary-Prefix.pch";
 				INFOPLIST_FILE = "vocabulary/vocabulary-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",

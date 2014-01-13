@@ -84,16 +84,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FYDStageCell *cell = nil;
-    
-    if ([tableView respondsToSelector:@selector(dequeueReusableCellWithIdentifier:forIndexPath:)])
-    {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    }
-    else
-    {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    }
+    FYDStageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     [cell setStage:[self.vocabularyBox stageAt:indexPath.row]];
     
@@ -113,7 +104,7 @@
     {
         FYDTestViewController *viewController = [[segue.destinationViewController viewControllers] objectAtIndex:0];
         
-        viewController.vocableTest = [self.vocabularyBox vocabularyTestForStage:[self.tableView indexPathForSelectedRow].row];
+        viewController.vocableTest = [self.vocabularyBox vocabularyTestForStage:[self.tableView indexPathForSelectedRow].row AndPractice:NO];
         
         viewController.delegate = self;
     }

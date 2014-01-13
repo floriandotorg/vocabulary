@@ -80,9 +80,9 @@
 }
 
 #ifndef FYD_NO_VOCABULARY_TEST
-- (FYDVocabularyTest*)vocabularyTestWithBox:(FYDVocabularyBox*)box
+- (FYDVocabularyTest*)vocabularyTestWithBox:(FYDVocabularyBox*)box  AndPractice:(BOOL)practice
 {
-    return [[FYDVocabularyTest alloc] initWithVocabularies:self.vocabularies AndVocabularyBox:box];
+    return [[FYDVocabularyTest alloc] initWithVocabularies:self.vocabularies AndVocabularyBox:box andPractice:practice];
 }
 #endif
 

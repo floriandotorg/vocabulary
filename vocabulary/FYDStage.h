@@ -32,7 +32,7 @@
 - (BOOL)recommanded;
 
 #ifndef FYD_NO_VOCABULARY_TEST
-- (FYDVocabularyTest*)vocabularyTestWithBox:(FYDVocabularyBox*)box;
+- (FYDVocabularyTest*)vocabularyTestWithBox:(FYDVocabularyBox*)box AndPractice:(BOOL)practice;
 #endif
 
 @end

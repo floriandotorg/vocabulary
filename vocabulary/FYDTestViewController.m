@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *exampleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *correctButton;
 @property (weak, nonatomic) IBOutlet UIButton *wrongButton;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (weak, nonatomic) IBOutlet UITapGestureRecognizer *labelGestureRecognizer;
 @property (weak, nonatomic) IBOutlet UIButton *speakerButton;
 
@@ -154,6 +155,7 @@
         
         self.correctButton.hidden = YES;
         self.wrongButton.hidden = YES;
+        self.nextButton.hidden = YES;
         self.labelGestureRecognizer.enabled = YES;
     }
 }
@@ -180,10 +182,22 @@
     [self nextVocable];
 }
 
+- (IBAction)nextButtonClick:(id)sender
+{
+    [self nextVocable];
+}
+
 - (void)wordAnimationDidStop
 {
-    self.correctButton.hidden = NO;
-    self.wrongButton.hidden = NO;
+    if (self.vocableTest.practice)
+    {
+        self.nextButton.hidden = NO;
+    }
+    else
+    {
+        self.correctButton.hidden = NO;
+        self.wrongButton.hidden = NO;
+    }
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch

@@ -66,9 +66,9 @@
 }
 
 #ifndef FYD_NO_VOCABULARY_TEST
-- (FYDVocabularyTest*)vocabularyTestForStage:(NSInteger)stageNo
+- (FYDVocabularyTest*)vocabularyTestForStage:(NSInteger)stageNo AndPractice:(BOOL)practice
 {
-    return [[self stageAt:stageNo] vocabularyTestWithBox:self];
+    return [[self stageAt:stageNo] vocabularyTestWithBox:self AndPractice:practice];
 }
 #endif
 

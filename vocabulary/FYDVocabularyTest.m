@@ -16,6 +16,8 @@
 
 @interface FYDVocabularyTest ()
 
+@property (nonatomic, assign) BOOL practice;
+
 @property (strong,nonatomic) FYDVocabularyBox *vocabularyBox;
 @property (strong,nonatomic) NSArray *vocabularies;
 @property (strong,nonatomic) NSEnumerator *enumerator;
@@ -25,10 +27,11 @@
 
 @implementation FYDVocabularyTest
 
-- (id)initWithVocabularies:(NSArray*)vocabularies AndVocabularyBox:(FYDVocabularyBox*)box
+- (id)initWithVocabularies:(NSArray*)vocabularies AndVocabularyBox:(FYDVocabularyBox*)box andPractice:(BOOL)practice
 {
     if (self = [super init])
     {
+        self.practice = practice;
         self.vocabularyBox = box;
         self.vocabularies = [[vocabularies mutableCopy] shuffle];
         self.enumerator = [self.vocabularies objectEnumerator];
@@ -44,14 +47,20 @@
 
 - (void)currentWrong
 {
-    NSAssert(self.vocabularyBox != nil, @"currentWrong vocabularyBox == nil");
-    [self.vocabularyBox putIntoFirstStage:self.currentVocable];
+    if (!self.practice)
+    {
+        NSAssert(self.vocabularyBox != nil, @"currentWrong vocabularyBox == nil");
+        [self.vocabularyBox putIntoFirstStage:self.currentVocable];
+    }
 }
 
 - (void)currentCorrect
 {
-    NSAssert(self.vocabularyBox != nil, @"currentCorrect vocabularyBox == nil");
-    [self.vocabularyBox putIntoNextStage:self.currentVocable];
+    if (!self.practice)
+    {
+        NSAssert(self.vocabularyBox != nil, @"currentCorrect vocabularyBox == nil");
+        [self.vocabularyBox putIntoNextStage:self.currentVocable];
+    }
 }
 
 - (void)deleteCurrent

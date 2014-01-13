@@ -22,7 +22,7 @@
 - (FYDStage*)stageAt:(NSInteger)stageNo;
 
 #ifndef FYD_NO_VOCABULARY_TEST
-- (FYDVocabularyTest*)vocabularyTestForStage:(NSInteger)stageNo;
+- (FYDVocabularyTest*)vocabularyTestForStage:(NSInteger)stageNo AndPractice:(BOOL)practice;
 #endif
 
 - (FYDStage*)recommandedStage;
