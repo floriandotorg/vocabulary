@@ -39,7 +39,7 @@
 {
     for (NSInteger n = 0; n < self.stageCount; ++n)
     {
-        if ([self stageAt:n].testCount < 3)
+        if ([self stageAt:n].testCount < 2)
         {
             return self.stages[n];
         }
