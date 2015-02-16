@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1709583F1883144100787BA3 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 1709583E1883144100787BA3 /* pencil.png */; };
 		170958421883175F00787BA3 /* PracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 170958411883175F00787BA3 /* PracticeViewController.m */; };
-		1762D2B5184E52B4001DC5F2 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1762D2B4184E52B4001DC5F2 /* Dropbox.framework */; };
 		1762D2B7184E52E8001DC5F2 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1762D2B6184E52E8001DC5F2 /* libc++.dylib */; };
 		17770156174E51CB006F1DE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17770155174E51CB006F1DE8 /* UIKit.framework */; };
 		17770158174E51CB006F1DE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17770157174E51CB006F1DE8 /* Foundation.framework */; };
@@ -33,21 +32,17 @@
 		1777019E174E628A006F1DE8 /* FYDVocable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1777019D174E628A006F1DE8 /* FYDVocable.m */; };
 		177701A1174E761A006F1DE8 /* FYDVocabularyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 177701A0174E761A006F1DE8 /* FYDVocabularyTest.m */; };
 		177701A6174E931F006F1DE8 /* FYDVocabularyBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 177701A5174E931F006F1DE8 /* FYDVocabularyBox.m */; };
-		17885BD4175A2A5E000B14C3 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17885BD3175A2A5E000B14C3 /* DejalActivityView.m */; };
 		178A4B6D174EC6AD00CFBB3E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B6C174EC6AD00CFBB3E /* CFNetwork.framework */; };
 		178A4B6F174EC6B500CFBB3E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B6E174EC6B500CFBB3E /* Security.framework */; };
 		178A4B71174EC6BC00CFBB3E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B70174EC6BC00CFBB3E /* SystemConfiguration.framework */; };
 		178A4B73174EC6C500CFBB3E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178A4B72174EC6C500CFBB3E /* QuartzCore.framework */; };
 		178A4B79174F65FA00CFBB3E /* FYDSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178A4B78174F65FA00CFBB3E /* FYDSettingsViewController.m */; };
 		17AC732C174F97BE00921E25 /* Speaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 17AC732B174F97BE00921E25 /* Speaker.png */; };
-		17B2E1FB1751229E00505428 /* libiSpeechSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B2E1FA1751229E00505428 /* libiSpeechSDK.a */; };
-		17B2E204175122C000505428 /* iSpeechSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E203175122C000505428 /* iSpeechSDK.bundle */; };
 		17B2E2061751230E00505428 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B2E2051751230E00505428 /* AudioToolbox.framework */; };
 		17B2E2081751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E2071751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png */; };
 		17B2E20E17512BC700505428 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E20D17512BC700505428 /* icon_114.png */; };
 		17B2E21017512BCD00505428 /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E20F17512BCD00505428 /* icon_57.png */; };
 		17B2E21317512FFE00505428 /* FYDVocableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B2E21217512FFD00505428 /* FYDVocableViewController.m */; };
-		17B2E2161751345700505428 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B2E2151751345700505428 /* NSMutableArray+Shuffle.m */; };
 		17B2E21817513AA800505428 /* trashbin_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 17B2E21717513AA800505428 /* trashbin_empty.png */; };
 		17B2E21B17513E5C00505428 /* NSString+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B2E21A17513E5C00505428 /* NSString+Empty.m */; };
 		17EC5FB71774E22A009E37F1 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC5FB61774E22A009E37F1 /* gear.png */; };
@@ -56,6 +51,8 @@
 		17EC5FBE1774E647009E37F1 /* FYDEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EC5FBD1774E647009E37F1 /* FYDEditViewController.m */; };
 		17EC5FC11774E895009E37F1 /* FYDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EC5FC01774E894009E37F1 /* FYDTabBarController.m */; };
 		17EC5FC41775A27D009E37F1 /* FYDVocableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EC5FC31775A27D009E37F1 /* FYDVocableCell.m */; };
+		17F9231A1A92726F007AD075 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F923191A92726F007AD075 /* AVFoundation.framework */; };
+		1FC95C5D85992871CEBC30B2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A669A6C0FE3B51C58716072 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +69,6 @@
 		1709583E1883144100787BA3 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
 		170958401883175F00787BA3 /* PracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeViewController.h; sourceTree = "<group>"; };
 		170958411883175F00787BA3 /* PracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeViewController.m; sourceTree = "<group>"; };
-		1762D2B4184E52B4001DC5F2 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
 		1762D2B6184E52E8001DC5F2 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		17770152174E51CB006F1DE8 /* vocabulary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vocabulary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17770155174E51CB006F1DE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -108,8 +104,6 @@
 		177701A0174E761A006F1DE8 /* FYDVocabularyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDVocabularyTest.m; sourceTree = "<group>"; };
 		177701A4174E931F006F1DE8 /* FYDVocabularyBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDVocabularyBox.h; sourceTree = "<group>"; };
 		177701A5174E931F006F1DE8 /* FYDVocabularyBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDVocabularyBox.m; sourceTree = "<group>"; };
-		17885BD2175A2A5E000B14C3 /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
-		17885BD3175A2A5E000B14C3 /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		178A4B6C174EC6AD00CFBB3E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		178A4B6E174EC6B500CFBB3E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		178A4B70174EC6BC00CFBB3E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -118,21 +112,12 @@
 		178A4B78174F65FA00CFBB3E /* FYDSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDSettingsViewController.m; sourceTree = "<group>"; };
 		17AC732B174F97BE00921E25 /* Speaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Speaker.png; sourceTree = "<group>"; };
 		17B2E1FA1751229E00505428 /* libiSpeechSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiSpeechSDK.a; sourceTree = "<group>"; };
-		17B2E1FD175122B300505428 /* iSpeechSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iSpeechSDK.h; sourceTree = "<group>"; };
-		17B2E1FE175122B300505428 /* ISSpeechRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSpeechRecognition.h; sourceTree = "<group>"; };
-		17B2E1FF175122B300505428 /* ISSpeechRecognitionLocales.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSpeechRecognitionLocales.h; sourceTree = "<group>"; };
-		17B2E200175122B300505428 /* ISSpeechRecognitionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSpeechRecognitionResult.h; sourceTree = "<group>"; };
-		17B2E201175122B300505428 /* ISSpeechSynthesis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSpeechSynthesis.h; sourceTree = "<group>"; };
-		17B2E202175122B300505428 /* ISSpeechSynthesisVoices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSpeechSynthesisVoices.h; sourceTree = "<group>"; };
-		17B2E203175122C000505428 /* iSpeechSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iSpeechSDK.bundle; sourceTree = "<group>"; };
 		17B2E2051751230E00505428 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		17B2E2071751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png"; sourceTree = "<group>"; };
 		17B2E20D17512BC700505428 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_114.png; path = ../icon_114.png; sourceTree = "<group>"; };
 		17B2E20F17512BCD00505428 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_57.png; path = ../icon_57.png; sourceTree = "<group>"; };
 		17B2E21117512FFD00505428 /* FYDVocableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDVocableViewController.h; sourceTree = "<group>"; };
 		17B2E21217512FFD00505428 /* FYDVocableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDVocableViewController.m; sourceTree = "<group>"; };
-		17B2E2141751345700505428 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
-		17B2E2151751345700505428 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
 		17B2E21717513AA800505428 /* trashbin_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trashbin_empty.png; sourceTree = "<group>"; };
 		17B2E21917513E5C00505428 /* NSString+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Empty.h"; sourceTree = "<group>"; };
 		17B2E21A17513E5C00505428 /* NSString+Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Empty.m"; sourceTree = "<group>"; };
@@ -145,6 +130,10 @@
 		17EC5FC01774E894009E37F1 /* FYDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDTabBarController.m; sourceTree = "<group>"; };
 		17EC5FC21775A27D009E37F1 /* FYDVocableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYDVocableCell.h; sourceTree = "<group>"; };
 		17EC5FC31775A27D009E37F1 /* FYDVocableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYDVocableCell.m; sourceTree = "<group>"; };
+		17F923191A92726F007AD075 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4A669A6C0FE3B51C58716072 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9EAC9787A6BC63173F2B451 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F75F6D39E2DB223FE083E738 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F9231A1A92726F007AD075 /* AVFoundation.framework in Frameworks */,
 				1762D2B7184E52E8001DC5F2 /* libc++.dylib in Frameworks */,
 				178A4B6D174EC6AD00CFBB3E /* CFNetwork.framework in Frameworks */,
 				178A4B6F174EC6B500CFBB3E /* Security.framework in Frameworks */,
@@ -160,9 +150,8 @@
 				178A4B73174EC6C500CFBB3E /* QuartzCore.framework in Frameworks */,
 				17770156174E51CB006F1DE8 /* UIKit.framework in Frameworks */,
 				17770158174E51CB006F1DE8 /* Foundation.framework in Frameworks */,
-				1762D2B5184E52B4001DC5F2 /* Dropbox.framework in Frameworks */,
 				1777015A174E51CB006F1DE8 /* CoreGraphics.framework in Frameworks */,
-				17B2E1FB1751229E00505428 /* libiSpeechSDK.a in Frameworks */,
+				1FC95C5D85992871CEBC30B2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +168,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		004CC82BDAC8C5B1085145CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F75F6D39E2DB223FE083E738 /* Pods.debug.xcconfig */,
+				E9EAC9787A6BC63173F2B451 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		17770149174E51CB006F1DE8 = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +184,7 @@
 				17770185174E51CC006F1DE8 /* vocabularyTests */,
 				17770154174E51CB006F1DE8 /* Frameworks */,
 				17770153174E51CB006F1DE8 /* Products */,
+				004CC82BDAC8C5B1085145CD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,8 +200,8 @@
 		17770154174E51CB006F1DE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17F923191A92726F007AD075 /* AVFoundation.framework */,
 				1762D2B6184E52E8001DC5F2 /* libc++.dylib */,
-				1762D2B4184E52B4001DC5F2 /* Dropbox.framework */,
 				17B2E2051751230E00505428 /* AudioToolbox.framework */,
 				17B2E1FA1751229E00505428 /* libiSpeechSDK.a */,
 				178A4B72174EC6C500CFBB3E /* QuartzCore.framework */,
@@ -213,6 +212,7 @@
 				17770157174E51CB006F1DE8 /* Foundation.framework */,
 				17770159174E51CB006F1DE8 /* CoreGraphics.framework */,
 				1777017F174E51CC006F1DE8 /* SenTestingKit.framework */,
+				4A669A6C0FE3B51C58716072 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -227,7 +227,7 @@
 				177701A2174E8019006F1DE8 /* Model */,
 				177701A7174E995E006F1DE8 /* View */,
 				17AC732D174F97C200921E25 /* Images */,
-				17B2E1FC175122A200505428 /* Headers */,
+				17B2E1FC175122A200505428 /* Utility */,
 				1777015C174E51CB006F1DE8 /* Supporting Files */,
 			);
 			path = vocabulary;
@@ -236,7 +236,6 @@
 		1777015C174E51CB006F1DE8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				17B2E203175122C000505428 /* iSpeechSDK.bundle */,
 				1777015D174E51CB006F1DE8 /* vocabulary-Info.plist */,
 				1777015E174E51CB006F1DE8 /* InfoPlist.strings */,
 				17770161174E51CB006F1DE8 /* main.m */,
@@ -330,23 +329,13 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
-		17B2E1FC175122A200505428 /* Headers */ = {
+		17B2E1FC175122A200505428 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				17885BD2175A2A5E000B14C3 /* DejalActivityView.h */,
-				17885BD3175A2A5E000B14C3 /* DejalActivityView.m */,
-				17B2E2141751345700505428 /* NSMutableArray+Shuffle.h */,
-				17B2E2151751345700505428 /* NSMutableArray+Shuffle.m */,
-				17B2E1FD175122B300505428 /* iSpeechSDK.h */,
-				17B2E1FE175122B300505428 /* ISSpeechRecognition.h */,
-				17B2E1FF175122B300505428 /* ISSpeechRecognitionLocales.h */,
-				17B2E200175122B300505428 /* ISSpeechRecognitionResult.h */,
-				17B2E201175122B300505428 /* ISSpeechSynthesis.h */,
-				17B2E202175122B300505428 /* ISSpeechSynthesisVoices.h */,
 				17B2E21917513E5C00505428 /* NSString+Empty.h */,
 				17B2E21A17513E5C00505428 /* NSString+Empty.m */,
 			);
-			name = Headers;
+			name = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,9 +345,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17770190174E51CC006F1DE8 /* Build configuration list for PBXNativeTarget "vocabulary" */;
 			buildPhases = (
+				F897C695A3BDCFE28B17F84F /* Check Pods Manifest.lock */,
 				1777014E174E51CB006F1DE8 /* Sources */,
 				1777014F174E51CB006F1DE8 /* Frameworks */,
 				17770150174E51CB006F1DE8 /* Resources */,
+				A1AC7EC167DEBA0B80DFAF1C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -386,7 +377,7 @@
 			name = vocabularyTests;
 			productName = vocabularyTests;
 			productReference = 1777017E174E51CC006F1DE8 /* vocabularyTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -395,6 +386,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = FYD;
+				LastTestingUpgradeCheck = 0610;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Floyd UG (haftungsbeschränkt)";
 			};
@@ -428,7 +420,6 @@
 				1777016C174E51CB006F1DE8 /* Default-568h@2x.png in Resources */,
 				1777016F174E51CB006F1DE8 /* MainStoryboard_iPhone.storyboard in Resources */,
 				17AC732C174F97BE00921E25 /* Speaker.png in Resources */,
-				17B2E204175122C000505428 /* iSpeechSDK.bundle in Resources */,
 				17B2E2081751287200505428 /* verkehrsschilder-halt-vorfahrt-gewaehren-nach-stvo-stop-schilder-vz206a90-601.png in Resources */,
 				17B2E20E17512BC700505428 /* icon_114.png in Resources */,
 				17B2E21017512BCD00505428 /* icon_57.png in Resources */,
@@ -463,6 +454,36 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		A1AC7EC167DEBA0B80DFAF1C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F897C695A3BDCFE28B17F84F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -482,9 +503,7 @@
 				178A4B79174F65FA00CFBB3E /* FYDSettingsViewController.m in Sources */,
 				17B2E21317512FFE00505428 /* FYDVocableViewController.m in Sources */,
 				170958421883175F00787BA3 /* PracticeViewController.m in Sources */,
-				17B2E2161751345700505428 /* NSMutableArray+Shuffle.m in Sources */,
 				17B2E21B17513E5C00505428 /* NSString+Empty.m in Sources */,
-				17885BD4175A2A5E000B14C3 /* DejalActivityView.m in Sources */,
 				17EC5FBE1774E647009E37F1 /* FYDEditViewController.m in Sources */,
 				17EC5FC11774E895009E37F1 /* FYDTabBarController.m in Sources */,
 				17EC5FC41775A27D009E37F1 /* FYDVocableCell.m in Sources */,
@@ -562,7 +581,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
@@ -588,7 +607,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
@@ -599,7 +618,9 @@
 		};
 		17770191174E51CC006F1DE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F75F6D39E2DB223FE083E738 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -608,7 +629,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vocabulary/vocabulary-Prefix.pch";
 				INFOPLIST_FILE = "vocabulary/vocabulary-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -621,7 +642,9 @@
 		};
 		17770192174E51CC006F1DE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9EAC9787A6BC63173F2B451 /* Pods.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -630,7 +653,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vocabulary/vocabulary-Prefix.pch";
 				INFOPLIST_FILE = "vocabulary/vocabulary-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",

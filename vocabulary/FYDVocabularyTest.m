@@ -33,8 +33,12 @@
     {
         self.practice = practice;
         self.vocabularyBox = box;
-        self.vocabularies = [[vocabularies mutableCopy] shuffle];
+
+        NSMutableArray *voc = [vocabularies mutableCopy];
+        [voc shuffle];
+        self.vocabularies = voc;
         self.enumerator = [self.vocabularies objectEnumerator];
+        
         [self nextVocable];
     }
     return self;

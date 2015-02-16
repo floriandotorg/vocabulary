@@ -1,0 +1,16 @@
+PODS:
+  - DejalActivityView (1.2)
+  - Dropbox-Sync-API-SDK (3.1.2)
+  - NSMutableArray-Shuffle (0.4)
+
+DEPENDENCIES:
+  - DejalActivityView
+  - Dropbox-Sync-API-SDK
+  - NSMutableArray-Shuffle
+
+SPEC CHECKSUMS:
+  DejalActivityView: ef0970deefe891fefd57af27765ddb21a8265755
+  Dropbox-Sync-API-SDK: 16aef545267acf60efdbecbfd1fbdf04d3ee5a7c
+  NSMutableArray-Shuffle: fc5dc21933a5b868331eecc866409177477a37ce
+
+COCOAPODS: 0.35.0

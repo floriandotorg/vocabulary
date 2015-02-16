@@ -37,8 +37,8 @@
 
 - (void)setStage:(FYDStage*)stage;
 {
-    self.stageTitelLabel.text = [NSString stringWithFormat:@"Stage %i", stage.no];
-    self.stageWordsLabel.text = [NSString stringWithFormat:@"%i words", stage.vocabularyCount];
+    self.stageTitelLabel.text = [NSString stringWithFormat:@"Stage %ld", stage.no];
+    self.stageWordsLabel.text = [NSString stringWithFormat:@"%ld words", stage.vocabularyCount];
     
     if (stage.recommanded)
     {
@@ -49,7 +49,7 @@
         self.recommandedLabel.hidden = YES;
     }
     
-    self.countLabel.text = [NSString stringWithFormat:@"%i", stage.testCount];
+    self.countLabel.text = [NSString stringWithFormat:@"%ld", stage.testCount];
     
     if (stage.vocabularyCount < 1)
     {

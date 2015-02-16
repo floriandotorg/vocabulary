@@ -9,7 +9,6 @@
 #import "FYDAppDelegate.h"
 
 #import <Dropbox/Dropbox.h>
-#import "iSpeechSDK.h"
 
 @implementation FYDAppDelegate
 
@@ -17,9 +16,6 @@
 {
     DBAccountManager* accountMgr = [[DBAccountManager alloc] initWithAppKey:@"h86hdham94t0str" secret:@"b9pgmyavmjf3zpu"];
     [DBAccountManager setSharedManager:accountMgr];
-    
-    iSpeechSDK *sdk = [iSpeechSDK sharedSDK];
-    sdk.APIKey = @"6c0ac1d97467b5b7f850b3924c952ea0";
     
     return YES;
 }

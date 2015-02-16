@@ -14,7 +14,7 @@
 
 @interface FYDStage : NSObject
 
-@property (readonly, nonatomic) int no;
+@property (readonly, nonatomic) NSInteger no;
 @property (readonly, nonatomic) NSUInteger testCount;
 @property (weak, nonatomic) FYDVocabularyBox *vocabularyBox;
 

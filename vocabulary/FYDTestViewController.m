@@ -8,6 +8,8 @@
 
 #import "FYDTestViewController.h"
 
+#import <AVFoundation/AVFoundation.h>
+
 #import "FYDVocable.h"
 #import "FYDStage.h"
 #import "FYDVocabularyTest.h"
@@ -25,7 +27,8 @@
 @property (weak, nonatomic) IBOutlet UITapGestureRecognizer *labelGestureRecognizer;
 @property (weak, nonatomic) IBOutlet UIButton *speakerButton;
 
-@property (strong, nonatomic) ISSpeechSynthesis *speechSynthesis;
+@property (strong, nonatomic) AVSpeechSynthesizer *speechSynthesis;
+@property (strong, nonatomic) AVSpeechUtterance *utterance;
 
 @end
 
@@ -35,8 +38,7 @@
 {
     [super viewDidLoad];
     
-    self.speechSynthesis = [[ISSpeechSynthesis alloc] init];
-    self.speechSynthesis.delegate = self;
+    self.speechSynthesis = [[AVSpeechSynthesizer alloc] init];
     
     [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(waitForSync:)
@@ -56,8 +58,8 @@
     self.wordLabel.text = self.vocableTest.currentVocable.foreign;
     self.exampleLabel.text = self.vocableTest.currentVocable.foreign_example;
     
-    self.speechSynthesis.text = self.vocableTest.currentVocable.foreign;
-    self.speechSynthesis.voice = ISVoiceUSEnglishFemale;
+    self.utterance = [[AVSpeechUtterance alloc] initWithString:self.vocableTest.currentVocable.foreign];
+    self.utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-US"];
 }
 
 - (void)showNative
@@ -65,8 +67,8 @@
     self.wordLabel.text = self.vocableTest.currentVocable.native;
     self.exampleLabel.text = @"";
     
-    self.speechSynthesis.text = self.vocableTest.currentVocable.native;
-    self.speechSynthesis.voice = ISVoiceEURGermanFemale;
+    self.utterance = [[AVSpeechUtterance alloc] initWithString:self.vocableTest.currentVocable.native];
+    self.utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"de-DE"];
 }
 
 - (void)showForeignNative
@@ -117,12 +119,6 @@
     [self endTest:NO];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewDidUnload
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -140,7 +136,7 @@
 
 - (IBAction)speakerButtonClick:(UIButton *)sender
 {
-    [self.speechSynthesis speak:nil];
+    [self.speechSynthesis speakUtterance:self.utterance];
 }
 
 - (void)nextVocable

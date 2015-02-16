@@ -17,7 +17,7 @@
 
 @interface FYDStage ()
 
-@property (assign, nonatomic) int no;
+@property (assign, nonatomic) NSInteger no;
 @property (assign, nonatomic) NSUInteger testCount;
 @property (strong, nonatomic) NSMutableArray *vocabularies;
 

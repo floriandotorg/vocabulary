@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "iSpeechSDK.h"
-
 @class FYDVocabularyTest;
 
 @protocol FYDTestViewControllerDelegate<NSObject>
@@ -18,7 +16,7 @@
 
 @end
 
-@interface FYDTestViewController : UIViewController<ISSpeechSynthesisDelegate>
+@interface FYDTestViewController : UIViewController
 
 @property (strong,nonatomic) FYDVocabularyTest *vocableTest;
 @property (weak,nonatomic) id<FYDTestViewControllerDelegate> delegate;

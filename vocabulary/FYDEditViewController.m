@@ -170,7 +170,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [NSString stringWithFormat:@"Stage %i", section + 1];
+    return [NSString stringWithFormat:@"Stage %ld", section + 1];
 }
 
 #pragma mark - Vocable View Controller

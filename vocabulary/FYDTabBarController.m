@@ -63,7 +63,7 @@ NSString *const FYDTabBarControllerWaitForSync = @"FYDTabBarControllerWaitForSyn
 {
     [self updateDropbox];
     
-    if ([[DBFilesystem sharedFilesystem] status] != DBSyncStatusActive)
+    if ([DBFilesystem sharedFilesystem].status.anyInProgress)
     {
         if ([DejalBezelActivityView currentActivityView] == nil)
         {
@@ -131,11 +131,20 @@ NSString *const FYDTabBarControllerWaitForSync = @"FYDTabBarControllerWaitForSyn
     
     if (self.file == nil)
     {
-        self.file = [[DBFilesystem sharedFilesystem] openFile:self.vocabularyBoxPath error:nil];
+        NSError *error;
+        self.file = [[DBFilesystem sharedFilesystem] openFile:self.vocabularyBoxPath error:&error];
+        
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+        }
         
         if (self.file == nil)
         {
-            self.file = [[DBFilesystem sharedFilesystem] createFile:self.vocabularyBoxPath error:nil];
+            NSError *error;
+            self.file = [[DBFilesystem sharedFilesystem] createFile:self.vocabularyBoxPath error:&error];
+            if (error) {
+                NSLog(@"%@", error.localizedDescription);
+            }
         }
         
         __block FYDTabBarController *block_self = self;
@@ -169,7 +178,7 @@ NSString *const FYDTabBarControllerWaitForSync = @"FYDTabBarControllerWaitForSyn
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    self.selectedIndex = 2;
+    self.selectedIndex = 3;
 }
 
 @end
