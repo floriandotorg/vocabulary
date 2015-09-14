@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1709583F1883144100787BA3 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 1709583E1883144100787BA3 /* pencil.png */; };
 		170958421883175F00787BA3 /* PracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 170958411883175F00787BA3 /* PracticeViewController.m */; };
+		175B7E611BA6DE2000D7FF59 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175B7E601BA6DE2000D7FF59 /* Launch Screen.xib */; };
 		1762D2B7184E52E8001DC5F2 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1762D2B6184E52E8001DC5F2 /* libc++.dylib */; };
 		17770156174E51CB006F1DE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17770155174E51CB006F1DE8 /* UIKit.framework */; };
 		17770158174E51CB006F1DE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17770157174E51CB006F1DE8 /* Foundation.framework */; };
@@ -68,6 +69,7 @@
 		1709583E1883144100787BA3 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
 		170958401883175F00787BA3 /* PracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeViewController.h; sourceTree = "<group>"; };
 		170958411883175F00787BA3 /* PracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeViewController.m; sourceTree = "<group>"; };
+		175B7E601BA6DE2000D7FF59 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		1762D2B6184E52E8001DC5F2 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		17770152174E51CB006F1DE8 /* vocabulary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vocabulary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17770155174E51CB006F1DE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -87,7 +89,7 @@
 		17770174174E51CB006F1DE8 /* FYDChooseTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDChooseTestViewController.m; sourceTree = "<group>"; };
 		17770176174E51CB006F1DE8 /* FYDTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYDTestViewController.h; sourceTree = "<group>"; };
 		17770177174E51CB006F1DE8 /* FYDTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDTestViewController.m; sourceTree = "<group>"; };
-		1777017E174E51CC006F1DE8 /* vocabularyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vocabularyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1777017E174E51CC006F1DE8 /* vocabularyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = vocabularyTests.octest; path = vocabularyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17770187174E51CC006F1DE8 /* vocabularyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "vocabularyTests-Info.plist"; sourceTree = "<group>"; };
 		17770189174E51CC006F1DE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1777018B174E51CC006F1DE8 /* vocabularyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vocabularyTests.h; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				17770164174E51CB006F1DE8 /* FYDAppDelegate.h */,
 				17770165174E51CB006F1DE8 /* FYDAppDelegate.m */,
 				1777016D174E51CB006F1DE8 /* MainStoryboard_iPhone.storyboard */,
+				175B7E601BA6DE2000D7FF59 /* Launch Screen.xib */,
 				177701A3174E802D006F1DE8 /* Controller */,
 				177701A2174E8019006F1DE8 /* Model */,
 				177701A7174E995E006F1DE8 /* View */,
@@ -428,6 +431,7 @@
 				17EC5FB71774E22A009E37F1 /* gear.png in Resources */,
 				17EC5FB91774E242009E37F1 /* graduation-cap.png in Resources */,
 				17EC5FBB1774E292009E37F1 /* write.png in Resources */,
+				175B7E611BA6DE2000D7FF59 /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
