@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>AE05D7C4-2CA8-4ABE-A366-19879A5EDE50</string>
 	<key>IDESourceControlProjectName</key>
-	<string>vocabulary</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>C8F6506F6C8C2D2166751319390FD3492FD6E564</key>
 		<string>https://github.com/floydgames/vocabulary.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>vocabulary.xcodeproj</string>
+	<string>vocabulary.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C8F6506F6C8C2D2166751319390FD3492FD6E564</key>

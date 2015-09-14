@@ -38,44 +38,44 @@
 
 - (void)testExample
 {
-    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
+    XCTAssertEqual(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
     
     [[self.vocabularyBox stageAt:0] incTestCount];
     
-    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
+    XCTAssertEqual(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
     
     [[self.vocabularyBox stageAt:0] incTestCount];
     [[self.vocabularyBox stageAt:0] incTestCount];
     
-    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:1], @"self.box.recommandedStage == [self.box stageAt:1]");
+    XCTAssertEqual(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:1], @"self.box.recommandedStage == [self.box stageAt:1]");
     
     [[self.vocabularyBox stageAt:1] incTestCount];
     
-    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
+    XCTAssertEqual(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
     
     [[self.vocabularyBox stageAt:0] incTestCount];
     [[self.vocabularyBox stageAt:0] incTestCount];
     [[self.vocabularyBox stageAt:0] incTestCount];
     
-    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:1], @"self.box.recommandedStage == [self.box stageAt:1]");
+    XCTAssertEqual(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:1], @"self.box.recommandedStage == [self.box stageAt:1]");
     
     [[self.vocabularyBox stageAt:1] incTestCount];
     
-    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
+    XCTAssertEqual(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
     
     [[self.vocabularyBox stageAt:0] incTestCount];
     [[self.vocabularyBox stageAt:0] incTestCount];
     [[self.vocabularyBox stageAt:0] incTestCount];
     
-    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:1], @"self.box.recommandedStage == [self.box stageAt:1]");
+    XCTAssertEqual(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:1], @"self.box.recommandedStage == [self.box stageAt:1]");
     
     [[self.vocabularyBox stageAt:1] incTestCount];
     
-    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:2], @"self.box.recommandedStage == [self.box stageAt:2]");
+    XCTAssertEqual(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:2], @"self.box.recommandedStage == [self.box stageAt:2]");
     
     [[self.vocabularyBox stageAt:2] incTestCount];
     
-    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
+    XCTAssertEqual(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
     
     [[self.vocabularyBox stageAt:0] incTestCount];
     [[self.vocabularyBox stageAt:0] incTestCount];
@@ -90,7 +90,7 @@
     [[self.vocabularyBox stageAt:0] incTestCount];
     [[self.vocabularyBox stageAt:1] incTestCount];
     
-    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:2], @"self.box.recommandedStage == [self.box stageAt:2]");
+    XCTAssertEqual(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:2], @"self.box.recommandedStage == [self.box stageAt:2]");
     
     [[self.vocabularyBox stageAt:2] incTestCount];
     
@@ -107,17 +107,17 @@
     [[self.vocabularyBox stageAt:0] incTestCount];
     [[self.vocabularyBox stageAt:1] incTestCount];
     
-    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:2], @"self.box.recommandedStage == [self.box stageAt:2]");
+    XCTAssertEqual(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:2], @"self.box.recommandedStage == [self.box stageAt:2]");
     
     [[self.vocabularyBox stageAt:2] incTestCount];
     
-    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
+    XCTAssertEqual(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:0], @"self.box.recommandedStage == [self.box stageAt:0]");
     
     [[self.vocabularyBox stageAt:0] incTestCount];
     [[self.vocabularyBox stageAt:0] incTestCount];
     [[self.vocabularyBox stageAt:0] incTestCount];
     
-    STAssertEquals(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:1], @"self.box.recommandedStage == [self.box stageAt:1]");
+    XCTAssertEqual(self.vocabularyBox.recommandedStage, [self.vocabularyBox stageAt:1], @"self.box.recommandedStage == [self.box stageAt:1]");
 }
 
 @end

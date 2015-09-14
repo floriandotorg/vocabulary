@@ -4,17 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-DejalActivityView.xcscheme</key>
+		<key>DejalActivityView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Dropbox-Sync-API-SDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-NSMutableArray-Shuffle.xcscheme</key>
+		<key>NSMutableArray-Shuffle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>771A82E3980CC280B5C7D284</key>
+		<key>7040A413C7A3BA200B561912A1718BF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>97C89621297817F0241316EB</key>
+		<key>81E3949EA44988F87E7EABF6CEE1FE3A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2D65A99073A866DCA025036</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E837EE50682E264A77FD7708</key>
+		<key>D23F1F20C72F956E3068850322EBFA69</key>
 		<dict>
 			<key>primary</key>
 			<true/>

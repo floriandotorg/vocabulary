@@ -1,0 +1,5 @@
+#include "NSMutableArray-Shuffle.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/NSMutableArray-Shuffle" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/DejalActivityView" "${PODS_ROOT}/Headers/Public/Dropbox-Sync-API-SDK" "${PODS_ROOT}/Headers/Public/Dropbox-Sync-API-SDK/Dropbox" "${PODS_ROOT}/Headers/Public/NSMutableArray-Shuffle"
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES
