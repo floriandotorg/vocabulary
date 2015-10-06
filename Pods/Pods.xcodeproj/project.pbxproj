@@ -7,62 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		191431B95D69990348B91E85AE7A094D /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB52941CF061553FEFE45B3D47577C1 /* NSMutableArray+Shuffle.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2A0382D5ECACB6E066DE3590D7FCC97A /* DejalActivityView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C0CD3EDC622DB70F2513A1C53F2175 /* DejalActivityView-dummy.m */; };
-		3A8583F9C0CE8F0650D915F8E3A9539B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F0AAECC8772AE7EBD8D9ACEFE2055F /* Foundation.framework */; };
-		485C90A93C52418369DACCD424749392 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEAB2FE4D450D06840F331D24A471B4 /* DejalActivityView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4ED7B5934E053814A6ABF7CF321BE0D8 /* NSMutableArray+Shuffle.h in Headers */ = {isa = PBXBuildFile; fileRef = 460502AE9732C041100E2D4FCA40021A /* NSMutableArray+Shuffle.h */; };
-		951D0CA5D62E291D42E4A048A6090C89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 196B42A7BE5262D15CEAB94686A4DD83 /* UIKit.framework */; };
-		A539AE2A58C8111391E4692A71B6A4E3 /* NSMutableArray-Shuffle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F822060DE903149BA13886A7F0ECE /* NSMutableArray-Shuffle-dummy.m */; };
-		B984E2115A9645B46B2B3A13EBE8E9B0 /* DejalActivityView.h in Headers */ = {isa = PBXBuildFile; fileRef = 86E6241F3144CBA7D745DC2EC197DEE0 /* DejalActivityView.h */; };
-		CF0770173842E87A7DDDEB7D6F129723 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F0AAECC8772AE7EBD8D9ACEFE2055F /* Foundation.framework */; };
+		000DD8C620E4643B8C0211C3967E0A4D /* NSMutableArray-Shuffle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D80C180DF0489D8A816938C3A5A9B6 /* NSMutableArray-Shuffle-dummy.m */; };
+		0D5DFE434D0ECE384AE94E0DD37E7295 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6618E1A9C7455915C26084785693A905 /* DejalActivityView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		12302BBBA1CC00C167916DA2779243BA /* DejalActivityView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CD5D2AC2080957FA65D18A8C16D2F9 /* DejalActivityView-dummy.m */; };
+		38669B532312260FB4ABB3C6FBBC48AE /* DejalActivityView.h in Headers */ = {isa = PBXBuildFile; fileRef = DF80A408EF3CF3237C39285A498D2C0A /* DejalActivityView.h */; };
+		49EA5C0D55DD252887F7C8C98F4E40C7 /* NSMutableArray+Shuffle.h in Headers */ = {isa = PBXBuildFile; fileRef = EDC95B5F3C1B6CBD2339F740EA534978 /* NSMutableArray+Shuffle.h */; };
+		70E9858799C4487943F15F9ADD2A30D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBC13C3381ADF60721C0876DEF5B540 /* UIKit.framework */; };
+		BE27C65545B847D992C3559B7D103987 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82597D9C21CC8B0E296BB973647D3AC /* Foundation.framework */; };
+		C47123DFB15C106C9DDDBCB1C768A213 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82597D9C21CC8B0E296BB973647D3AC /* Foundation.framework */; };
+		CF0770173842E87A7DDDEB7D6F129723 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E82597D9C21CC8B0E296BB973647D3AC /* Foundation.framework */; };
+		DDC7CD2EC3016156721A8C498F635713 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 50292A336F8E997D984CDF6B1802D550 /* NSMutableArray+Shuffle.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DE4874D3DE4F768E0ABBBA28C6DB2318 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A436EEAB0FE1129690974753F04100C /* Pods-dummy.m */; };
-		FE558C1DBCB7607467A2C53FE9C291C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52F0AAECC8772AE7EBD8D9ACEFE2055F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3D6BB33933417F047FC990FAE007FAD2 /* PBXContainerItemProxy */ = {
+		331EFBBEAEA806DDA14FA39BE9036824 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D23F1F20C72F956E3068850322EBFA69;
+			remoteGlobalIDString = 4A95E91BD3104C70752A78A6E302DF24;
 			remoteInfo = "NSMutableArray-Shuffle";
 		};
-		EA59A28961EDEE20288E5C538473CC93 /* PBXContainerItemProxy */ = {
+		8FAB327B312D4C0376B18B45BB3640D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 81E3949EA44988F87E7EABF6CEE1FE3A;
+			remoteGlobalIDString = F415A00F5023F602FD7AB096D67505CB;
 			remoteInfo = DejalActivityView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06D80C180DF0489D8A816938C3A5A9B6 /* NSMutableArray-Shuffle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray-Shuffle-dummy.m"; sourceTree = "<group>"; };
 		15A529C27057E4A57D259CBC6E6CE49C /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		196B42A7BE5262D15CEAB94686A4DD83 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		15CD5D2AC2080957FA65D18A8C16D2F9 /* DejalActivityView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DejalActivityView-dummy.m"; sourceTree = "<group>"; };
 		1FAF40A0C9726A34C976688708393449 /* NSMutableArray-Shuffle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSMutableArray-Shuffle.xcconfig"; sourceTree = "<group>"; };
-		2A7F822060DE903149BA13886A7F0ECE /* NSMutableArray-Shuffle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray-Shuffle-dummy.m"; sourceTree = "<group>"; };
-		31C0CD3EDC622DB70F2513A1C53F2175 /* DejalActivityView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DejalActivityView-dummy.m"; sourceTree = "<group>"; };
 		326382A373627FD800D29240BB854B3F /* DejalActivityView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DejalActivityView-prefix.pch"; sourceTree = "<group>"; };
 		3A436EEAB0FE1129690974753F04100C /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		460502AE9732C041100E2D4FCA40021A /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
-		52A25710A0EA13C9011C94687D2565C4 /* libNSMutableArray-Shuffle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNSMutableArray-Shuffle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		52F0AAECC8772AE7EBD8D9ACEFE2055F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		63A7F7F8FB508E2E140296E70EF19C9E /* NSMutableArray-Shuffle-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSMutableArray-Shuffle-Private.xcconfig"; sourceTree = "<group>"; };
+		50292A336F8E997D984CDF6B1802D550 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
+		5379C2956BC48F0462B21D7E4AC2DFE8 /* libDejalActivityView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDejalActivityView.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		641AE05DD55E5E6AC1590CD7B4A18F97 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		6618E1A9C7455915C26084785693A905 /* DejalActivityView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		69AA7744DBE9134F4048BE6559A3E598 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D1E61CA236DB6F10BAA10381EBB14DB /* NSMutableArray-Shuffle-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray-Shuffle-prefix.pch"; sourceTree = "<group>"; };
-		86E6241F3144CBA7D745DC2EC197DEE0 /* DejalActivityView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
-		AAAD14E17253FF0A6699E40DB1467DE4 /* DejalActivityView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "DejalActivityView-Private.xcconfig"; sourceTree = "<group>"; };
+		8952C2F9084B1E4FBD183EB5E24A5CC8 /* NSMutableArray-Shuffle-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "NSMutableArray-Shuffle-Private.xcconfig"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BCCA9F7B75ACCDA0985CEA74471C3BE0 /* libNSMutableArray-Shuffle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libNSMutableArray-Shuffle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF59BC15D23E1E1912C8F334E7236813 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		D14153C12125DE4AB0D8A00319073CA5 /* DejalActivityView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "DejalActivityView-Private.xcconfig"; sourceTree = "<group>"; };
 		D1D57F0A8A260CB35C6FB61BD377E68A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		DBEAB2FE4D450D06840F331D24A471B4 /* DejalActivityView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		DCE8F1B693BC586FCB2281426ED2481E /* DejalActivityView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DejalActivityView.xcconfig; sourceTree = "<group>"; };
+		DF80A408EF3CF3237C39285A498D2C0A /* DejalActivityView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
 		E422A08C030B8295E8D792461A04913D /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dropbox.framework; path = "dropbox-ios-sync-sdk-3.1.2/Dropbox.framework"; sourceTree = "<group>"; };
 		E72F5F5F29568DA1626E98D3DF306A96 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		EF4AEAE399C1E65BD67D487219805869 /* libDejalActivityView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDejalActivityView.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFB52941CF061553FEFE45B3D47577C1 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
+		E82597D9C21CC8B0E296BB973647D3AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EDC95B5F3C1B6CBD2339F740EA534978 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
+		FFBC13C3381ADF60721C0876DEF5B540 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,20 +74,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A31E4F72B89D5935CBAB9AC5A10944B4 /* Frameworks */ = {
+		D1AC8F621B6FB05ACFC7C5A4844B782E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE558C1DBCB7607467A2C53FE9C291C9 /* Foundation.framework in Frameworks */,
-				951D0CA5D62E291D42E4A048A6090C89 /* UIKit.framework in Frameworks */,
+				C47123DFB15C106C9DDDBCB1C768A213 /* Foundation.framework in Frameworks */,
+				70E9858799C4487943F15F9ADD2A30D2 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE2F5C25E0C7B7FBC921538F009D7CC7 /* Frameworks */ = {
+		F276C7316DAF5116DEC1B4C780C39B21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A8583F9C0CE8F0650D915F8E3A9539B /* Foundation.framework in Frameworks */,
+				BE27C65545B847D992C3559B7D103987 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				DCE8F1B693BC586FCB2281426ED2481E /* DejalActivityView.xcconfig */,
-				AAAD14E17253FF0A6699E40DB1467DE4 /* DejalActivityView-Private.xcconfig */,
-				31C0CD3EDC622DB70F2513A1C53F2175 /* DejalActivityView-dummy.m */,
+				D14153C12125DE4AB0D8A00319073CA5 /* DejalActivityView-Private.xcconfig */,
+				15CD5D2AC2080957FA65D18A8C16D2F9 /* DejalActivityView-dummy.m */,
 				326382A373627FD800D29240BB854B3F /* DejalActivityView-prefix.pch */,
 			);
 			name = "Support Files";
@@ -138,8 +138,8 @@
 		82756BE5752880E63539AC8FFDFCB5E5 /* DejalActivityView */ = {
 			isa = PBXGroup;
 			children = (
-				86E6241F3144CBA7D745DC2EC197DEE0 /* DejalActivityView.h */,
-				DBEAB2FE4D450D06840F331D24A471B4 /* DejalActivityView.m */,
+				DF80A408EF3CF3237C39285A498D2C0A /* DejalActivityView.h */,
+				6618E1A9C7455915C26084785693A905 /* DejalActivityView.m */,
 				5D5108EE02D558C74EAA251B965E3F56 /* Support Files */,
 			);
 			path = DejalActivityView;
@@ -162,8 +162,8 @@
 		9F043944159F640C7E3DEEFCCCEC2338 /* NSMutableArray-Shuffle */ = {
 			isa = PBXGroup;
 			children = (
-				460502AE9732C041100E2D4FCA40021A /* NSMutableArray+Shuffle.h */,
-				FFB52941CF061553FEFE45B3D47577C1 /* NSMutableArray+Shuffle.m */,
+				EDC95B5F3C1B6CBD2339F740EA534978 /* NSMutableArray+Shuffle.h */,
+				50292A336F8E997D984CDF6B1802D550 /* NSMutableArray+Shuffle.m */,
 				FB455DD6FF691D0A7C73849DB0DB2681 /* Support Files */,
 			);
 			path = "NSMutableArray-Shuffle";
@@ -180,8 +180,8 @@
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EF4AEAE399C1E65BD67D487219805869 /* libDejalActivityView.a */,
-				52A25710A0EA13C9011C94687D2565C4 /* libNSMutableArray-Shuffle.a */,
+				5379C2956BC48F0462B21D7E4AC2DFE8 /* libDejalActivityView.a */,
+				BCCA9F7B75ACCDA0985CEA74471C3BE0 /* libNSMutableArray-Shuffle.a */,
 				69AA7744DBE9134F4048BE6559A3E598 /* libPods.a */,
 			);
 			name = Products;
@@ -190,8 +190,8 @@
 		D0FB9306D21AF23A056944AE037CBFFF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				52F0AAECC8772AE7EBD8D9ACEFE2055F /* Foundation.framework */,
-				196B42A7BE5262D15CEAB94686A4DD83 /* UIKit.framework */,
+				E82597D9C21CC8B0E296BB973647D3AC /* Foundation.framework */,
+				FFBC13C3381ADF60721C0876DEF5B540 /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -216,8 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				1FAF40A0C9726A34C976688708393449 /* NSMutableArray-Shuffle.xcconfig */,
-				63A7F7F8FB508E2E140296E70EF19C9E /* NSMutableArray-Shuffle-Private.xcconfig */,
-				2A7F822060DE903149BA13886A7F0ECE /* NSMutableArray-Shuffle-dummy.m */,
+				8952C2F9084B1E4FBD183EB5E24A5CC8 /* NSMutableArray-Shuffle-Private.xcconfig */,
+				06D80C180DF0489D8A816938C3A5A9B6 /* NSMutableArray-Shuffle-dummy.m */,
 				6D1E61CA236DB6F10BAA10381EBB14DB /* NSMutableArray-Shuffle-prefix.pch */,
 			);
 			name = "Support Files";
@@ -227,25 +227,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		AA325E2A7200F1E07C2A19E5DA6070A8 /* Headers */ = {
+		0609F0F4298D06640303B3448D5D4F71 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ED7B5934E053814A6ABF7CF321BE0D8 /* NSMutableArray+Shuffle.h in Headers */,
+				49EA5C0D55DD252887F7C8C98F4E40C7 /* NSMutableArray+Shuffle.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E46C3521CE5A7134F605DAFBD63C1DDB /* Headers */ = {
+		3D77D05537903A4A8A762B94EF34E2C9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B984E2115A9645B46B2B3A13EBE8E9B0 /* DejalActivityView.h in Headers */,
+				38669B532312260FB4ABB3C6FBBC48AE /* DejalActivityView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4A95E91BD3104C70752A78A6E302DF24 /* NSMutableArray-Shuffle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFF9D26C2844A30DC506B224615F98FB /* Build configuration list for PBXNativeTarget "NSMutableArray-Shuffle" */;
+			buildPhases = (
+				221DFAF71DA95BBE8C27880083BF0411 /* Sources */,
+				F276C7316DAF5116DEC1B4C780C39B21 /* Frameworks */,
+				0609F0F4298D06640303B3448D5D4F71 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NSMutableArray-Shuffle";
+			productName = "NSMutableArray-Shuffle";
+			productReference = BCCA9F7B75ACCDA0985CEA74471C3BE0 /* libNSMutableArray-Shuffle.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		7040A413C7A3BA200B561912A1718BF1 /* Pods */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F41AD8288FF0FCAE0C2301C46F4C8AC /* Build configuration list for PBXNativeTarget "Pods" */;
@@ -256,21 +273,21 @@
 			buildRules = (
 			);
 			dependencies = (
-				F618CCCD8039CC53B327BB2856D23E25 /* PBXTargetDependency */,
-				9508A428B568B314F1132144D52357DF /* PBXTargetDependency */,
+				EF0AD923A6CEF5F23BE144BDC9449C3F /* PBXTargetDependency */,
+				349E4C35F7EC50A75C1E12212C9013D2 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
 			productReference = 69AA7744DBE9134F4048BE6559A3E598 /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		81E3949EA44988F87E7EABF6CEE1FE3A /* DejalActivityView */ = {
+		F415A00F5023F602FD7AB096D67505CB /* DejalActivityView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9FCFEEB48037070536B5A25BFEFCDE75 /* Build configuration list for PBXNativeTarget "DejalActivityView" */;
+			buildConfigurationList = DFF6B96E7C0207676F7E34DBC78E4029 /* Build configuration list for PBXNativeTarget "DejalActivityView" */;
 			buildPhases = (
-				6944D87AA025516B2D53D492C7AB7C44 /* Sources */,
-				A31E4F72B89D5935CBAB9AC5A10944B4 /* Frameworks */,
-				E46C3521CE5A7134F605DAFBD63C1DDB /* Headers */,
+				8555A4524FFD58620ACC6CC058B5DEE5 /* Sources */,
+				D1AC8F621B6FB05ACFC7C5A4844B782E /* Frameworks */,
+				3D77D05537903A4A8A762B94EF34E2C9 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -278,24 +295,7 @@
 			);
 			name = DejalActivityView;
 			productName = DejalActivityView;
-			productReference = EF4AEAE399C1E65BD67D487219805869 /* libDejalActivityView.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		D23F1F20C72F956E3068850322EBFA69 /* NSMutableArray-Shuffle */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 388F6E779188E5220FDBAD8E70EEF672 /* Build configuration list for PBXNativeTarget "NSMutableArray-Shuffle" */;
-			buildPhases = (
-				8F99DE7BB21E78B41CC59F49CD29B539 /* Sources */,
-				AE2F5C25E0C7B7FBC921538F009D7CC7 /* Frameworks */,
-				AA325E2A7200F1E07C2A19E5DA6070A8 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "NSMutableArray-Shuffle";
-			productName = "NSMutableArray-Shuffle";
-			productReference = 52A25710A0EA13C9011C94687D2565C4 /* libNSMutableArray-Shuffle.a */;
+			productReference = 5379C2956BC48F0462B21D7E4AC2DFE8 /* libDejalActivityView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -319,14 +319,23 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				81E3949EA44988F87E7EABF6CEE1FE3A /* DejalActivityView */,
-				D23F1F20C72F956E3068850322EBFA69 /* NSMutableArray-Shuffle */,
+				F415A00F5023F602FD7AB096D67505CB /* DejalActivityView */,
+				4A95E91BD3104C70752A78A6E302DF24 /* NSMutableArray-Shuffle */,
 				7040A413C7A3BA200B561912A1718BF1 /* Pods */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		221DFAF71DA95BBE8C27880083BF0411 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDC7CD2EC3016156721A8C498F635713 /* NSMutableArray+Shuffle.m in Sources */,
+				000DD8C620E4643B8C0211C3967E0A4D /* NSMutableArray-Shuffle-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		300E6CBAA25CFC1182DB0D70EE826684 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,64 +344,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6944D87AA025516B2D53D492C7AB7C44 /* Sources */ = {
+		8555A4524FFD58620ACC6CC058B5DEE5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A0382D5ECACB6E066DE3590D7FCC97A /* DejalActivityView-dummy.m in Sources */,
-				485C90A93C52418369DACCD424749392 /* DejalActivityView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8F99DE7BB21E78B41CC59F49CD29B539 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				191431B95D69990348B91E85AE7A094D /* NSMutableArray+Shuffle.m in Sources */,
-				A539AE2A58C8111391E4692A71B6A4E3 /* NSMutableArray-Shuffle-dummy.m in Sources */,
+				12302BBBA1CC00C167916DA2779243BA /* DejalActivityView-dummy.m in Sources */,
+				0D5DFE434D0ECE384AE94E0DD37E7295 /* DejalActivityView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9508A428B568B314F1132144D52357DF /* PBXTargetDependency */ = {
+		349E4C35F7EC50A75C1E12212C9013D2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "NSMutableArray-Shuffle";
-			target = D23F1F20C72F956E3068850322EBFA69 /* NSMutableArray-Shuffle */;
-			targetProxy = 3D6BB33933417F047FC990FAE007FAD2 /* PBXContainerItemProxy */;
+			target = 4A95E91BD3104C70752A78A6E302DF24 /* NSMutableArray-Shuffle */;
+			targetProxy = 331EFBBEAEA806DDA14FA39BE9036824 /* PBXContainerItemProxy */;
 		};
-		F618CCCD8039CC53B327BB2856D23E25 /* PBXTargetDependency */ = {
+		EF0AD923A6CEF5F23BE144BDC9449C3F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DejalActivityView;
-			target = 81E3949EA44988F87E7EABF6CEE1FE3A /* DejalActivityView */;
-			targetProxy = EA59A28961EDEE20288E5C538473CC93 /* PBXContainerItemProxy */;
+			target = F415A00F5023F602FD7AB096D67505CB /* DejalActivityView */;
+			targetProxy = 8FAB327B312D4C0376B18B45BB3640D1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		35DD3756CBDB3B958C9869B995EEA8AA /* Debug */ = {
+		1A990076DE505830D21F1114047701B2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63A7F7F8FB508E2E140296E70EF19C9E /* NSMutableArray-Shuffle-Private.xcconfig */;
+			baseConfigurationReference = D14153C12125DE4AB0D8A00319073CA5 /* DejalActivityView-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/NSMutableArray-Shuffle/NSMutableArray-Shuffle-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		3E496BBB182CDB072A3B34700E87D5EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63A7F7F8FB508E2E140296E70EF19C9E /* NSMutableArray-Shuffle-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/NSMutableArray-Shuffle/NSMutableArray-Shuffle-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/DejalActivityView/DejalActivityView-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -437,12 +421,12 @@
 			};
 			name = Release;
 		};
-		69D4FBC64C6B6289487198A1EE54F1FA /* Debug */ = {
+		8D2D5F1E13889B7460B0D406E33A4C85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAAD14E17253FF0A6699E40DB1467DE4 /* DejalActivityView-Private.xcconfig */;
+			baseConfigurationReference = 8952C2F9084B1E4FBD183EB5E24A5CC8 /* NSMutableArray-Shuffle-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DejalActivityView/DejalActivityView-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/NSMutableArray-Shuffle/NSMutableArray-Shuffle-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -452,6 +436,22 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		A3464D2820D59C9C672FAC34D3181CB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8952C2F9084B1E4FBD183EB5E24A5CC8 /* NSMutableArray-Shuffle-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NSMutableArray-Shuffle/NSMutableArray-Shuffle-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		A8B6A90555845112318E58E01F74D819 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -508,21 +508,21 @@
 			};
 			name = Debug;
 		};
-		D02BB7B939F29037D5230619641B8F53 /* Release */ = {
+		EEFDE9F0B8B176F9FC48D3B7AAAC6F80 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAAD14E17253FF0A6699E40DB1467DE4 /* DejalActivityView-Private.xcconfig */;
+			baseConfigurationReference = D14153C12125DE4AB0D8A00319073CA5 /* DejalActivityView-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/DejalActivityView/DejalActivityView-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		FB69E62ED24BA42CA962173AFCC53E70 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -552,15 +552,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		388F6E779188E5220FDBAD8E70EEF672 /* Build configuration list for PBXNativeTarget "NSMutableArray-Shuffle" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				35DD3756CBDB3B958C9869B995EEA8AA /* Debug */,
-				3E496BBB182CDB072A3B34700E87D5EE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		3F41AD8288FF0FCAE0C2301C46F4C8AC /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -570,11 +561,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9FCFEEB48037070536B5A25BFEFCDE75 /* Build configuration list for PBXNativeTarget "DejalActivityView" */ = {
+		BFF9D26C2844A30DC506B224615F98FB /* Build configuration list for PBXNativeTarget "NSMutableArray-Shuffle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				69D4FBC64C6B6289487198A1EE54F1FA /* Debug */,
-				D02BB7B939F29037D5230619641B8F53 /* Release */,
+				8D2D5F1E13889B7460B0D406E33A4C85 /* Debug */,
+				A3464D2820D59C9C672FAC34D3181CB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFF6B96E7C0207676F7E34DBC78E4029 /* Build configuration list for PBXNativeTarget "DejalActivityView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEFDE9F0B8B176F9FC48D3B7AAAC6F80 /* Debug */,
+				1A990076DE505830D21F1114047701B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

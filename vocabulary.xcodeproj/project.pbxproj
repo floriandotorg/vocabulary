@@ -89,7 +89,7 @@
 		17770174174E51CB006F1DE8 /* FYDChooseTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDChooseTestViewController.m; sourceTree = "<group>"; };
 		17770176174E51CB006F1DE8 /* FYDTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FYDTestViewController.h; sourceTree = "<group>"; };
 		17770177174E51CB006F1DE8 /* FYDTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FYDTestViewController.m; sourceTree = "<group>"; };
-		1777017E174E51CC006F1DE8 /* vocabularyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = vocabularyTests.octest; path = vocabularyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1777017E174E51CC006F1DE8 /* vocabularyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vocabularyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17770187174E51CC006F1DE8 /* vocabularyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "vocabularyTests-Info.plist"; sourceTree = "<group>"; };
 		17770189174E51CC006F1DE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1777018B174E51CC006F1DE8 /* vocabularyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vocabularyTests.h; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				17770152174E51CB006F1DE8 /* vocabulary.app */,
-				1777017E174E51CC006F1DE8 /* vocabularyTests.octest */,
+				1777017E174E51CC006F1DE8 /* vocabularyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -375,7 +375,7 @@
 			);
 			name = vocabularyTests;
 			productName = vocabularyTests;
-			productReference = 1777017E174E51CC006F1DE8 /* vocabularyTests.octest */;
+			productReference = 1777017E174E51CC006F1DE8 /* vocabularyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -386,7 +386,7 @@
 			attributes = {
 				CLASSPREFIX = FYD;
 				LastTestingUpgradeCheck = 0640;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Floyd UG (haftungsbeschränkt)";
 				TargetAttributes = {
 					17770151174E51CB006F1DE8 = {
@@ -575,6 +575,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -608,6 +610,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -640,6 +643,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "floyd.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -666,6 +670,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "floyd.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -685,6 +690,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vocabulary/vocabulary-Prefix.pch";
 				INFOPLIST_FILE = "vocabularyTests/vocabularyTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "floyd.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
@@ -702,6 +708,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "vocabulary/vocabulary-Prefix.pch";
 				INFOPLIST_FILE = "vocabularyTests/vocabularyTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "floyd.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
